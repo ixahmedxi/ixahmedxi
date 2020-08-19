@@ -7,7 +7,7 @@ I am a full stack web developer from Egypt & a computer science freshman at Roya
 #
 
 <div align="center">
-  <p><strong>Connect with me</strong></p>
+  <p align="center"><strong>Connect with me</strong></p>
   <a href="https://medium.com/@ixahmedxi">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/medium.svg" alt="Medium" width="25">
   </a>
