@@ -6,8 +6,6 @@ I am a full stack web developer from Egypt & a computer science freshman at Roya
 
 #
 
-#
-
 <div align="center">
   <p align="center"><strong>Connect with me</strong></p>
   <a href="https://medium.com/@ixahmedxi">
