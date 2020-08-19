@@ -4,6 +4,8 @@
 
 I am a full stack web developer from Egypt & a computer science freshman at Royal Holloway University of London. I have always been intriguied as to how websites and applications are made and from the age of 16 I started playing around with HTML and CSS. Over the years I have accumelated a lot of skills and knowledge in both the frontend and the backend side of things. I am currently learning React Native and flutter & working on [lop.si](https://github.com/ixahmedxi/lop.si) and [next-boilerpack]((https://github.com/ixahmedxi/next-boilerpack)).
 
+#
+
 <div align="center">
   <p><strong>Connect with me</strong></p>
   <a href="https://medium.com/@ixahmedxi">
