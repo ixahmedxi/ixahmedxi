@@ -1,12 +1,12 @@
 /* @jsx jsx */
+import { Home } from '@components/Home/Home.component'
 import { jsx } from 'theme-ui'
 
 const IndexPage = () => {
   return (
-    <div>
-      <h1 sx={{ fontWeight: 'heading' }}>Hello World</h1>
-      <p>Hellooooo</p>
-    </div>
+    <>
+      <Home />
+    </>
   )
 }
 

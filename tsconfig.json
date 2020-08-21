@@ -20,7 +20,7 @@
     "paths": {
       "test-utils": ["src/utils/testUtils"],
       "@public/*": ["public/*"],
-      "@assets/*": ["public/assets/*"],
+      "@images/*": ["public/images/*"],
       "@shared/*": ["src/components/shared/*"],
       "@components/*": ["src/components/*"],
       "@contexts/*": ["src/contexts/*"],
