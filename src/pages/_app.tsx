@@ -31,6 +31,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
           * {
             box-sizing: border-box;
           }
+
           h1,
           h2,
           h3,
@@ -46,8 +47,8 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         `}
       />
       <DefaultSeo
-        title='next-boilerpack - A nextjs boilerplate with some cool stuff added to it'
-        description='next-boilerpack is a next.js boilerplate that includes many of the commonly used tools and libraries alongside to make starting a new project fast and effortless'
+        title='Ahmed Elsakaan - Full stack web developer'
+        description='Hey there! I am a full stack web developer from Egypt who’s currently pursuing a BSc computer science degree at Royal Holloway University of London. I specialise in Reactjs on the frontend and Nodejs on the backend.'
       />
       <Component {...pageProps} />
     </ThemeProvider>
