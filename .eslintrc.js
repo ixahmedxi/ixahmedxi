@@ -41,6 +41,14 @@ module.exports = {
         }
       }
     ],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton']
+      }
+    ],
     '@typescript-eslint/no-unused-vars': [
       1,
       { vars: 'all', args: 'all', varsIgnorePattern: '^jsx$' }
@@ -61,7 +69,8 @@ module.exports = {
     'jest/expect-expect': 0,
     '@typescript-eslint/no-unsafe-member-access': 0,
     '@typescript-eslint/no-unsafe-return': 0,
-    '@typescript-eslint/explicit-function-return-type': 0
+    '@typescript-eslint/explicit-function-return-type': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0
   },
   ignorePatterns: ['**/*.js', 'next-env.d.ts']
 }

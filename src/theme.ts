@@ -1,52 +1,28 @@
-export const theme = {
-  useColorSchemeMediaQuery: true,
+import { Theme } from 'theme-ui'
+
+export const theme: Theme = {
   colors: {
-    primary: '#657eea',
-    secondary: '#37b3ac',
+    primary: '#F4A261',
     text: '#111',
-    background: '#fff',
-    muted: '#e5e5e5',
-    modes: {
-      dark: {
-        primary: '#657eea',
-        secondary: '#37b3ac',
-        text: '#fff',
-        background: '#111',
-        muted: '#282828'
-      },
-      light: {
-        primary: '#657eea',
-        secondary: '#37b3ac',
-        text: '#111',
-        background: '#fff',
-        muted: '#e5e5e5'
-      }
-    }
+    background: '#eee'
   },
   fonts: {
-    body:
-      'Open Sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading:
-      'Staatliches, Open Sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif'
+    body: 'Metropolis, Arial, sans-serif'
   },
   fontWeights: {
     body: 400,
-    heading: 600
+    heading: 900
   },
   styles: {
     root: {
       fontFamily: 'body',
       color: 'text',
-      bg: 'background',
-      transition: '0.2s ease-out'
+      bg: 'background'
     }
   },
   fontSizes: [12, 16, 24, 32, 40, 48, 56, 64],
   space: [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96],
   sizes: [0, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96],
   lineHeights: [1, 1.5, 2, 2.5, 3],
-  // Same breakpoints as bootstrap v5
   breakpoints: ['576px', '768px', '992px', '1200px', '1400px']
 }
-
-export type ThemeType = typeof theme

@@ -17,12 +17,7 @@ export default class extends Document {
   render(): JSX.Element {
     return (
       <Html>
-        <Head>
-          <link
-            href='https://fonts.googleapis.com/css2?family=Open+Sans&family=Staatliches&display=swap'
-            rel='stylesheet'
-          />
-        </Head>
+        <Head />
         <body>
           <InitializeColorMode />
           <Main />
