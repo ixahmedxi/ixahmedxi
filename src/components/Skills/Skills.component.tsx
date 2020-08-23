@@ -2,6 +2,7 @@ import { Container } from '@shared/Container/Container.component'
 import { SectionHeader } from '@shared/SectionHeader/SectionHeader.component'
 import { darken } from '@theme-ui/color'
 import { Box, Flex, Image, Text } from 'theme-ui'
+import { StackBox } from './StackBox.component'
 
 interface Icon {
   src: string
@@ -81,57 +82,28 @@ export const Skills = () => {
         />
         <Box sx={{ width: '4px', height: '30px', bg: 'text', mx: 'auto' }} />
         <Box sx={{ width: String(100 / 3) + '%', height: '4px', bg: 'text', mx: 'auto' }} />
-        <Flex sx={{ justifyContent: 'center', flexDirection: 'row', mt: 6 }}>
-          <Box
-            sx={{
-              width: String(100 / 3) + '%',
-              minHeight: '300px',
-              bg: darken('background', 0.05),
-              mr: 3,
-              position: 'relative',
-              borderRadius: '15px',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                height: 6,
-                top: -6,
-                width: '4px',
-                bg: 'text'
-              },
-              '&::after': {
-                content: '""',
-                position: 'absolute',
-                width: 12,
-                height: '4px',
-                bg: 'text',
-                top: '-52px'
-              }
-            }}></Box>
-          <Box
-            sx={{
-              width: String(100 / 3) + '%',
-              minHeight: '300px',
-              bg: 'text',
-              position: 'relative',
-              borderRadius: '15px',
-              '&::before': {
-                content: '""',
-                position: 'absolute',
-                height: 6,
-                top: -6,
-                width: '4px',
-                bg: 'text'
-              },
-              '&::after': {
-                content: '""',
-                position: 'absolute',
-                width: 12,
-                height: '4px',
-                bg: 'text',
-                top: '-52px',
-                left: 'calc(50% - 92px)'
-              }
-            }}></Box>
+        <Flex sx={{ justifyContent: 'center', mt: 6, textAlign: 'left' }}>
+          <StackBox
+            title='Frontend stack'
+            items={[
+              'React.js',
+              'Next.js or Gatsby',
+              'theme-ui or styled-components',
+              'Apollo GraphQL',
+              'Redux (maybe)'
+            ]}
+          />
+          <StackBox
+            isRight
+            title='Backend stack'
+            items={[
+              'Node.js',
+              'NestJS or Express',
+              'TypeORM or MikroORM',
+              'PostgreSQL or MongoDB',
+              'GraphQL'
+            ]}
+          />
         </Flex>
       </Container>
     </Box>
