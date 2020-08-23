@@ -1,7 +1,28 @@
 /* @jsx jsx */
 import wave from '@images/wave.svg'
-import { jsx } from 'theme-ui'
+import { useEffect, useState } from 'react'
+import { Box, jsx } from 'theme-ui'
 
 export const Wave = () => {
-  return <img src={wave} alt='wave' width='100%' sx={{ mb: '-1px' }} />
+  const [posX, setPosX] = useState('-350px')
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () => {
+        const offset = 350
+        setPosX('-' + String(offset + document.documentElement.scrollTop) + 'px')
+      })
+    }
+  })
+  return (
+    <Box
+      sx={{
+        mb: '-3px',
+        background: `url(${wave}) repeat`,
+        backgroundPosition: `${posX} 0px`,
+        backgroundSize: 'cover',
+        height: 115,
+        width: '100%'
+      }}
+    />
+  )
 }

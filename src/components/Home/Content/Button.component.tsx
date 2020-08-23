@@ -31,7 +31,8 @@ export const ProjectsButton = () => {
         '&:hover': {
           '&::before': {
             top: 0,
-            left: 0
+            left: 0,
+            borderRadius: 0
           }
         }
       }}>

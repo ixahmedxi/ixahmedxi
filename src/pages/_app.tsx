@@ -28,6 +28,11 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
             font-style: normal;
           }
 
+          body {
+            max-width: 100vw;
+            overflow-x: hidden;
+          }
+
           * {
             box-sizing: border-box;
           }
@@ -43,6 +48,10 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
             font-weight: 400;
             margin: 0;
             padding: 0;
+          }
+
+          p {
+            line-height: 1.5;
           }
         `}
       />

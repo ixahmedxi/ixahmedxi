@@ -7,7 +7,7 @@ import { Box, Flex, Image, jsx, Text } from 'theme-ui'
 
 export const About = () => {
   return (
-    <Box sx={{ bg: 'text', color: 'background', py: 12 }}>
+    <Box sx={{ bg: 'text', color: 'background', py: '200px' }}>
       <Container>
         <Flex sx={{ alignItems: 'center' }}>
           <Flex sx={{ justifyContent: 'space-between' }}>

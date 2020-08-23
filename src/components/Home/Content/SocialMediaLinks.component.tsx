@@ -29,7 +29,13 @@ export const SocialMediaLinks = () => {
             target='_blank'
             key={SLink.link}
             rel='noreferrer noopener'
-            sx={{ fontSize: 3, color: 'currentColor', py: 1 }}>
+            sx={{
+              fontSize: 3,
+              color: 'currentColor',
+              py: 1,
+              transition: '0.2s ease-in-out',
+              '&:hover': { transform: 'scale(1.15)' }
+            }}>
             <SLink.Icon />
           </Link>
         ))}
