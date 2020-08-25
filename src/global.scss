@@ -1,5 +1,19 @@
+@font-face {
+  font-family: Metropolis;
+  font-weight: 900;
+  src: url('assets/fonts/Metropolis-Black.woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Metropolis;
+  font-weight: 400;
+  src: url('assets/fonts/Metropolis-Regular.woff2');
+  font-display: swap;
+}
+
 :root {
-  --primary: #F4A261;
+  --primary: #f4a261;
   --background: #eeeeee;
   --text: #111111;
 }
@@ -13,12 +27,45 @@
 body {
   background-color: var(--background, '#eee');
   color: var(--text, '#111');
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Metropolis, Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
   padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1140px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    max-width: 1320px;
+  }
 }
