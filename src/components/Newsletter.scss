@@ -28,6 +28,11 @@
   .content-wrapper {
     text-align: center;
     z-index: 999;
+    @media screen and (max-width: 768px) {
+      p {
+        padding: 0 15px;
+      }
+    }
     .button {
       border-color: var(--background);
       margin-top: 30px;
@@ -35,15 +40,24 @@
         background-color: var(--background);
         color: var(--text);
       }
+      @media screen and (max-width: 768px) {
+        margin-top: 15px;
+      }
     }
 
     .icon {
       font-size: 50px;
+      @media screen and (max-width: 768px) {
+        font-size: 30px;
+      }
     }
 
     h3 {
       font-size: 2.5rem;
       font-weight: 900;
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
     }
   }
 
