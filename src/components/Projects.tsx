@@ -69,7 +69,7 @@ export const Projects = () => {
               href={project.website}
               target='_blank'
               rel='noopener noreferrer'
-              className='projects-button'>
+              className='button'>
               <div className='inner'>
                 <FiArrowRight /> Check it out!
               </div>
@@ -88,7 +88,7 @@ export const Projects = () => {
             href='https://github.com/ixahmedxi'
             target='_blank'
             rel='noopener noreferrer'
-            className='projects-button github'>
+            className='button github'>
             <div className='inner'>
               <FaGithub /> Github
             </div>
@@ -97,7 +97,7 @@ export const Projects = () => {
             href='https://github.com/ixahmedxi'
             target='_blank'
             rel='noopener noreferrer'
-            className='projects-button'>
+            className='button'>
             <div className='inner'>
               <FaCodepen /> Codepen
             </div>

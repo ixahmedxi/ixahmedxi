@@ -1,5 +1,8 @@
 .projects-wrapper {
   padding: 100px 0;
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
   .projects-button {
     text-decoration: none;
     color: inherit;
@@ -32,12 +35,20 @@
       font-weight: 900;
       color: var(--primary);
       font-size: 2.5rem;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     p {
       padding-top: 15px;
       width: 50%;
       margin: 0 auto;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 15px 15px 0 15px;
+      }
     }
   }
 
@@ -46,6 +57,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
+    @media screen and (max-width: 768px) {
+      display: block;
+      grid-template-columns: none;
+    }
+
     .project-card {
       background-color: #e1e1e1;
       border-radius: 35px;
@@ -53,9 +69,24 @@
       position: relative;
       margin: 0 25px 30px 25px;
 
+      @media screen and (max-width: 768px) {
+        margin: 0 20px 30px 20px;
+        width: calc(100% - 40px);
+        text-align: center;
+        padding: 30px;
+        border-radius: 20px;
+      }
+
       h3 {
         font-weight: 900;
         font-size: 1.5rem;
+        @media screen and (max-width: 768px) {
+          font-size: 1.3rem;
+        }
+      }
+
+      .button {
+        margin-top: 15px;
       }
 
       .source-button {
@@ -80,11 +111,33 @@
           right: -30px;
           top: 30px;
         }
+
+        @media screen and (max-width: 768px) {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+          right: -10px;
+          top: 0px;
+
+          &:hover {
+            width: 50px;
+            height: 50px;
+            right: -15px;
+            top: -5px;
+          }
+        }
       }
 
       h5 {
         padding: 15px 0;
         line-height: 1.5;
+      }
+
+      h5,
+      p {
+        @media screen and (max-width: 768px) {
+          text-align: left;
+        }
       }
     }
   }
@@ -93,13 +146,22 @@
     text-align: center;
 
     .buttons {
-      .projects-button {
+      .button {
         margin-top: 15px;
         margin-left: 15px;
       }
-      .projects-button.github {
+      .button.github {
         margin-left: 0;
         margin-right: 15px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .button {
+          margin-left: 7.5px;
+        }
+        .button.github {
+          margin-right: 7.5px;
+        }
       }
     }
   }
