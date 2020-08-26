@@ -3,15 +3,25 @@
   color: var(--background);
   padding: 200px 0;
 
+  @media screen and (max-width: 768px) {
+    padding: 50px 0 115px 0;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
     .inner-content {
       flex: 0.7;
       .title {
         font-size: 2.5rem;
         color: var(--primary);
         font-weight: 900;
+        @media screen and (max-width: 768px) {
+          font-size: 1.8rem;
+        }
       }
 
       .description {
@@ -50,12 +60,22 @@
       align-items: center;
       justify-content: flex-end;
       flex: 0.3;
+      @media screen and (max-width: 768px) {
+        margin-top: 50px;
+        justify-content: center;
+      }
       .image {
         width: 200px;
         height: 200px;
         border-radius: 100px;
         border: 5px solid var(--background);
         transition: 0.2s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+          height: 150px;
+          width: 150px;
+          border-width: 3px;
+        }
 
         &:hover {
           transform: scale(1.1) rotate(-15deg);

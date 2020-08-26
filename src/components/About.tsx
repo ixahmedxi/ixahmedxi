@@ -18,7 +18,7 @@ export const About = () => {
   `)
 
   return (
-    <div className='about-wrapper'>
+    <section className='about-wrapper'>
       <div className='container'>
         <div className='inner-content'>
           <h1 className='title'>More about me</h1>
@@ -52,6 +52,6 @@ export const About = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }

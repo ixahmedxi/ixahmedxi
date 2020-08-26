@@ -6,7 +6,7 @@ import './Landing.scss'
 
 export const Landing = () => {
   return (
-    <div className='landing-wrapper'>
+    <header className='landing-wrapper' id='landing'>
       <div className='container'>
         <div className='inner-content'>
           <h1 className='title'>Hey! I'm Ahmed Elsakaan</h1>
@@ -58,6 +58,6 @@ export const Landing = () => {
           options={{ height: 50, amplitude: 30, speed: 0.3, points: 3 }}
         />
       </div>
-    </div>
+    </header>
   )
 }
