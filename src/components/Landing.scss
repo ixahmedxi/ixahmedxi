@@ -1,0 +1,73 @@
+.landing-wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .inner-content {
+      .title {
+        font-size: 3rem;
+        font-weight: 900;
+        padding-bottom: 15px;
+      }
+
+      .description {
+        width: 70%;
+        padding-bottom: 15px;
+        strong {
+          font-weight: 900;
+        }
+      }
+
+      .projects-button {
+        display: inline-block;
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        outline: none;
+        padding: 15px 30px;
+        border: 3px solid var(--text);
+        font-weight: 900;
+        border-radius: 3px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          width: 100%;
+          height: 100%;
+          background-color: var(--primary);
+          border-radius: 3px;
+          z-index: -1;
+          transition: 0.2s ease-in-out;
+        }
+
+        &:hover {
+          &::before {
+            top: 0;
+            left: 0;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+
+    .social-media-links {
+      display: flex;
+      flex-direction: column;
+      a {
+        font-size: 24px;
+        color: inherit;
+        padding: 10px 0;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2) rotate(-15deg);
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,12 @@
 import React from 'react'
+import { Landing } from '../components/Landing'
 import SEO from '../components/seo'
 
 const index = () => {
   return (
-    <div className='container'>
+    <div>
       <SEO title='Home' />
-      <h1>Hello World</h1>
+      <Landing />
     </div>
   )
 }
