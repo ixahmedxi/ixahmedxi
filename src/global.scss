@@ -60,6 +60,16 @@ strong {
   font-weight: 900;
   border-radius: 3px;
   transition: 0.2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 15px;
+    }
+  }
 
   &:hover {
     background-color: var(--text);

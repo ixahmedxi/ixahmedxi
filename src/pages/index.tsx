@@ -1,5 +1,6 @@
 import React from 'react'
 import { About } from '../components/About'
+import { Contact } from '../components/Contact'
 import { Landing } from '../components/Landing'
 import { Newsletter } from '../components/Newsletter'
 import { Projects } from '../components/Projects'
@@ -15,6 +16,7 @@ const index = () => {
       <Skills />
       <Projects />
       <Newsletter />
+      <Contact />
     </div>
   )
 }
