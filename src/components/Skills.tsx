@@ -18,7 +18,7 @@ const frontend = [
   'Next.js or Gatsby',
   'theme-ui, styled-components or sass',
   'Apollo GraphQL',
-  'Redux (depends on the scale of the project)',
+  'Redux (maybe)',
 ]
 
 const backend = [

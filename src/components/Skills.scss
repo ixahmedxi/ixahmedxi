@@ -1,6 +1,10 @@
 .skills-wrapper {
   padding-top: 100px;
 
+  @media screen and (max-width: 768px) {
+    padding-top: 50px;
+  }
+
   .title {
     text-align: center;
 
@@ -8,12 +12,19 @@
       font-size: 2.5rem;
       color: var(--primary);
       font-weight: 900;
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
 
     p {
       width: 50%;
       margin: 0 auto;
       padding-top: 15px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 
@@ -24,6 +35,23 @@
     justify-content: center;
     svg {
       margin: 0 10px;
+      @media screen and (max-width: 768px) {
+        width: 35px;
+        margin: 0 5px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+
+    .inner {
+      @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     }
   }
 
@@ -34,6 +62,9 @@
       width: 35%;
       line-height: 1.5;
       margin: 0 auto;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     .tree {
@@ -58,6 +89,10 @@
       display: flex;
       margin-top: 100px;
       justify-content: center;
+      @media screen and (max-width: 992px) {
+        flex-wrap: wrap;
+        margin-top: 50px;
+      }
       .stack-card {
         width: calc(100% / 3);
         background-color: #e1e1e1;
@@ -87,6 +122,20 @@
           left: 50%;
         }
 
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          margin-right: 0;
+          font-size: 14px;
+
+          &::after {
+            display: none;
+          }
+
+          &::before {
+            left: calc(50% - 2px);
+          }
+        }
+
         .stack-title {
           font-size: 1.5rem;
           font-weight: 900;
@@ -104,6 +153,10 @@
         background-color: #111;
         color: #eee;
         margin-right: 0;
+
+        @media screen and (max-width: 992px) {
+          margin-top: 50px;
+        }
 
         &::after {
           left: -15px;
