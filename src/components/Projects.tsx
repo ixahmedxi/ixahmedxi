@@ -40,7 +40,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <div className='projects-wrapper container'>
+    <div className='projects-wrapper container' id='projects'>
       <div className='title'>
         <h2>Some of my past projects</h2>
         <p>
@@ -50,7 +50,7 @@ export const Projects = () => {
       </div>
       <div className='cards-wrapper'>
         {projects.map(project => (
-          <div className='project-card'>
+          <div className='project-card' key={project.title}>
             <h3>{project.title}</h3>
             <a
               href={project.source}

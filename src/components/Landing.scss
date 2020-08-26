@@ -31,6 +31,7 @@
         border: 3px solid var(--text);
         font-weight: 900;
         border-radius: 3px;
+        cursor: pointer;
 
         &::before {
           content: '';

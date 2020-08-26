@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaCodepen, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { Link } from 'react-scroll'
 import Wave from 'react-wavify'
 import './Landing.scss'
 
@@ -17,9 +18,12 @@ export const Landing = () => {
             in <strong>Reactjs</strong> on the frontend and{' '}
             <strong>Nodejs</strong> on the backend.
           </p>
-          <a href='#projects' className='projects-button'>
+          <Link
+            to='projects'
+            className='projects-button'
+            smooth='easeInOutCubic'>
             View my projects
-          </a>
+          </Link>
         </div>
         <div className='social-media-links'>
           <a
