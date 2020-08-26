@@ -1,0 +1,14 @@
+.footer-wrapper {
+  background-color: var(--text);
+  color: var(--background);
+  padding: 50px 0;
+  text-align: center;
+  .heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      margin-left: 5px;
+    }
+  }
+}
