@@ -15,13 +15,15 @@ export const Newsletter = () => {
           Never miss any of my new projects or blog posts when I start that. I
           will not spam, I promise :)
         </p>
-        <a
-          href='https://ixahmedix.me'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='button'>
-          Subscribe now!
-        </a>
+        <form className='newsletter-form'>
+          <input
+            type='email'
+            name='newsletter-email'
+            id='newsletter-email'
+            placeholder='Your email address...'
+          />
+          <button type='submit'>Subscribe!</button>
+        </form>
       </div>
       <div className='credit'>
         <span>
