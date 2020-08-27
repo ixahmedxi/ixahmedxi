@@ -19,4 +19,12 @@
       margin-left: 5px;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 25px 0;
+    p,
+    .top-button {
+      font-size: 12px;
+    }
+  }
 }

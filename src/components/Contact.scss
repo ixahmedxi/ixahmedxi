@@ -1,6 +1,10 @@
 .contact-wrapper {
   padding: 100px 0;
 
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+  }
+
   .title {
     text-align: center;
     h3 {
@@ -8,14 +12,23 @@
       color: var(--primary);
       font-weight: 900;
       margin-bottom: 15px;
+      @media screen and (max-width: 768px) {
+        font-size: 1.8rem;
+      }
     }
   }
   form {
+    @media screen and (max-width: 768px) {
+      padding: 0 15px;
+    }
     .row {
       margin-top: 50px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
+      @media screen and (max-width: 992px) {
+        grid-template-columns: none;
+      }
       .input-wrapper {
         label {
           display: block;
@@ -56,18 +69,31 @@
       margin-top: 50px;
       display: flex;
       justify-content: center;
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+      }
       .button {
         width: 300px;
         margin: 0 15px;
+        background-color: transparent;
         .inner {
           justify-content: center;
           width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          margin: 0;
         }
       }
 
       .button.send {
         background-color: var(--primary);
         border-color: transparent;
+
+        @media screen and (max-width: 768px) {
+          margin-bottom: 15px;
+        }
 
         &:hover {
           color: var(--text);
