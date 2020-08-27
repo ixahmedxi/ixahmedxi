@@ -64,6 +64,11 @@
         width: 300px;
         margin: 0 15px;
         background-color: transparent;
+
+        &:hover {
+          color: var(--background);
+          background-color: var(--text);
+        }
         .inner {
           justify-content: center;
           width: 100%;
