@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCodepen, FaGithub } from 'react-icons/fa'
 import { FiArrowRight, FiCode } from 'react-icons/fi'
 import './Projects.scss'
+import { Title } from './shared/Title'
 
 const projects = [
   {
@@ -41,13 +42,11 @@ const projects = [
 export const Projects = () => {
   return (
     <div className='projects-wrapper container' id='projects'>
-      <div className='title'>
-        <h2>Some of my past projects</h2>
-        <p>
-          I am always trying to create new projects to try new technologies,
-          contribute to open source projects and expand my knowledge.
-        </p>
-      </div>
+      <Title
+        title='Some of my past projects'
+        description='I am always trying to create new projects to try new technologies,
+        contribute to open source projects and expand my knowledge.'
+      />
       <div className='cards-wrapper'>
         {projects.map(project => (
           <div className='project-card' key={project.title}>

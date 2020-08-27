@@ -21,7 +21,7 @@ export const About = () => {
     <section className='about-wrapper'>
       <div className='container'>
         <div className='inner-content'>
-          <h1 className='title'>More about me</h1>
+          <h1 className='about-title'>More about me</h1>
           <p className='description'>
             I am a full stack web developer from Egypt & a computer science
             freshman at Royal Holloway University of London. I have always been

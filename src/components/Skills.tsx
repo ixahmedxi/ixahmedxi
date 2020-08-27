@@ -10,6 +10,7 @@ import {
   Typescript,
 } from '@icons-pack/react-simple-icons'
 import React from 'react'
+import { Title } from './shared/Title'
 import './Skills.scss'
 
 const frontend = [
@@ -33,13 +34,11 @@ const backend = [
 export const Skills = () => {
   return (
     <div className='skills-wrapper container'>
-      <div className='title'>
-        <h1>Knowledge & skills</h1>
-        <p>
-          I have worked with a lot of technologies throughout the years and am
-          always trying to improve and broaden my abilities
-        </p>
-      </div>
+      <Title
+        title='Knowledge & skills'
+        description='I have worked with a lot of technologies throughout the years and am
+          always trying to improve and broaden my abilities'
+      />
       <div className='skills-logos'>
         <div className='inner'>
           <Firebase size='50px' />

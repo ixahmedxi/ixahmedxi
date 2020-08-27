@@ -1,17 +1,16 @@
 import React from 'react'
 import { FiRefreshCcw, FiSend } from 'react-icons/fi'
 import './Contact.scss'
+import { Title } from './shared/Title'
 
 export const Contact = () => {
   return (
     <div className='contact-wrapper container'>
-      <div className='title'>
-        <h3>Have something to say?</h3>
-        <p>
-          Feel free to drop me a message, I will try to get <br /> back to you
-          as soon as possible!
-        </p>
-      </div>
+      <Title
+        title='Have something to say?'
+        description='Feel free to drop me a message, I will try to get back to you
+        as soon as possible!'
+      />
       <form>
         <div className='row'>
           <div className='input-wrapper'>
