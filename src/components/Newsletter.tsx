@@ -1,8 +1,26 @@
-import React from 'react'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
+import React, { useState } from 'react'
 import { FiMail } from 'react-icons/fi'
 import './Newsletter.scss'
 
+interface FormSubmissionResult {
+  result: 'success' | 'error'
+  msg: string
+}
+
 export const Newsletter = () => {
+  const [email, setEmail] = useState('')
+  const [
+    submissionData,
+    setSubmissionData,
+  ] = useState<FormSubmissionResult | null>(null)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const result = await addToMailchimp(email)
+    setSubmissionData(result)
+  }
+
   return (
     <div className='newsletter-wrapper'>
       <div className='filter' />
@@ -15,15 +33,29 @@ export const Newsletter = () => {
           Never miss any of my new projects or blog posts when I start that. I
           will not spam, I promise :)
         </p>
-        <form className='newsletter-form'>
-          <input
-            type='email'
-            name='newsletter-email'
-            id='newsletter-email'
-            placeholder='Your email address...'
-          />
-          <button type='submit'>Subscribe!</button>
-        </form>
+        {submissionData === null && (
+          <form className='newsletter-form' onSubmit={handleSubmit}>
+            <input
+              type='email'
+              name='newsletter-email'
+              id='newsletter-email'
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              placeholder='Your email address...'
+            />
+            <button type='submit'>Subscribe!</button>
+          </form>
+        )}
+        <div className='result-message'>
+          {submissionData?.result === 'success' && <p>{submissionData.msg}</p>}
+          {submissionData?.result === 'error' && (
+            <p>
+              {submissionData.msg.includes('is already subscribed')
+                ? 'You are already subscribed :)'
+                : submissionData.msg}
+            </p>
+          )}
+        </div>
       </div>
       <div className='credit'>
         <span>

@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaCodepen, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import Wave from 'react-wavify'
 import './Landing.scss'
 
 export const Landing = () => {
+  const [isPaused, setIsPaused] = useState(true)
+
+  useEffect(() => {
+    setIsPaused(false)
+  }, [])
+
   return (
     <header className='landing-wrapper' id='landing'>
       <div className='container'>
@@ -55,6 +61,7 @@ export const Landing = () => {
       <div className='wave'>
         <Wave
           fill='#111'
+          paused={isPaused}
           options={{ height: 50, amplitude: 30, speed: 0.3, points: 3 }}
         />
       </div>

@@ -7,7 +7,6 @@
   color: var(--background);
   padding: 100px 0;
   display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
 
@@ -31,6 +30,17 @@
     @media screen and (max-width: 768px) {
       p {
         padding: 0 15px;
+      }
+    }
+
+    .result-message {
+      padding-top: 30px;
+      p {
+        font-size: 24px;
+        font-weight: 900;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
       }
     }
 

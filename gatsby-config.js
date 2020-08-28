@@ -5,6 +5,13 @@ module.exports = {
     author: `@ixahmedxii`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-mailchimp`,
+      options: {
+        endpoint:
+          'https://ixahmedxi.us17.list-manage.com/subscribe/post?u=9d034f3d379f9c09974dcf622&amp;id=9574f95ef1',
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
