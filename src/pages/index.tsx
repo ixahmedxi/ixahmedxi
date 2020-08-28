@@ -13,22 +13,23 @@ const index = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setIsLoading(false)
+    document.body.style.height = 'auto'
+    document.body.style.overflow = 'scroll'
+    const time = setTimeout(() => setIsLoading(false), 250)
+    return () => clearTimeout(time)
   }, [])
 
   return (
     <div>
       <SEO />
       <LoadingScreen isLoading={isLoading} />
-      <div style={{ display: isLoading ? 'none' : 'block' }}>
-        <Landing />
-        <About />
-        <Skills />
-        <Projects />
-        <Newsletter />
-        <Contact />
-        <Footer />
-      </div>
+      <Landing />
+      <About />
+      <Skills />
+      <Projects />
+      <Newsletter />
+      <Contact />
+      <Footer />
     </div>
   )
 }

@@ -1,13 +1,24 @@
 .loading-wrapper {
   height: 100vh;
   width: 100vw;
-  background-color: #fff;
+  background-color: #eee;
   position: fixed;
+  left: 0;
+  top: 0;
   z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
   &.hidden {
-    display: none;
+    animation: hideScreen 0.5s ease-in-out forwards;
+  }
+}
+
+@keyframes hideScreen {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100vh;
   }
 }
