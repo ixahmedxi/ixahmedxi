@@ -1,15 +1,17 @@
-import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
-import { Helmet } from "react-helmet"
+import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
 interface Props {
   description?: string
   lang?: string
-  meta: ConcatArray<{ name: string; content: any; property?: undefined; } | { property: string; content: any; name?: undefined; }>
-  title: string
+  meta: ConcatArray<
+    | { name: string; content: any; property?: undefined }
+    | { property: string; content: any; name?: undefined }
+  >
 }
 
-const SEO = ({ description, lang, meta, title }: Props) => {
+const SEO = ({ description, lang, meta }: Props) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,8 +33,7 @@ const SEO = ({ description, lang, meta, title }: Props) => {
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={site.siteMetadata.title}
       meta={[
         {
           name: `description`,
@@ -40,7 +41,7 @@ const SEO = ({ description, lang, meta, title }: Props) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           property: `og:description`,
@@ -60,7 +61,7 @@ const SEO = ({ description, lang, meta, title }: Props) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
