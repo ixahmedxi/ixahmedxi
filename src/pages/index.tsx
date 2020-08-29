@@ -13,8 +13,6 @@ const index = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    document.body.style.height = 'auto'
-    document.body.style.overflow = 'scroll'
     const time = setTimeout(() => setIsLoading(false), 250)
     return () => clearTimeout(time)
   }, [])
