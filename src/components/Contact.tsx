@@ -11,7 +11,12 @@ export const Contact = () => {
         description='Feel free to drop me a message, I will try to get back to you
         as soon as possible!'
       />
-      <form name='contact' method='POST' data-netlify='true'>
+      <form
+        name='contact'
+        method='POST'
+        data-netlify='true'
+        netlify-honeypot='bot-field'>
+        <input type='hidden' name='bot-field' />
         <div className='row'>
           <div className='input-wrapper'>
             <label htmlFor='name'>Full name:</label>
