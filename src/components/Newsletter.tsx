@@ -31,7 +31,7 @@ export const Newsletter = () => {
         <h3>Subscribe to my newsletter!</h3>
         <p>
           Never miss any of my new projects or blog posts when I start that. I
-          will not spam, I promise :)
+          will not spam, I promise
         </p>
         <form className='newsletter-form' onSubmit={handleSubmit}>
           {submissionData === null && (
