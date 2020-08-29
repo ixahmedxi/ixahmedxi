@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#eeeeee`,
         theme_color: `#F4A261`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`,
+        icon: `src/assets/images/icon.svg`,
       },
     },
   ],
