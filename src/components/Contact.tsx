@@ -11,9 +11,7 @@ export const Contact = () => {
         description='Feel free to drop me a message, I will try to get back to you
         as soon as possible!'
       />
-      <form
-        action='https://getform.io/f/69577175-dea7-4b35-95a2-c639d7c6b30b'
-        method='POST'>
+      <form name='contact' method='POST' data-netlify='true'>
         <div className='row'>
           <div className='input-wrapper'>
             <label htmlFor='name'>Full name:</label>
