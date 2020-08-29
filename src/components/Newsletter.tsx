@@ -23,7 +23,6 @@ export const Newsletter = () => {
 
   return (
     <div className='newsletter-wrapper'>
-      <div className='filter' />
       <div className='content-wrapper'>
         <div className='icon'>
           <FiMail />

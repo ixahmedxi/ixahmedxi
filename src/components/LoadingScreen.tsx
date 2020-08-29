@@ -9,7 +9,7 @@ interface Props {
 export const LoadingScreen = ({ isLoading }: Props) => {
   return (
     <div className={isLoading ? 'loading-wrapper' : 'loading-wrapper hidden'}>
-      <BounceLoader size={100} loading={true} color='#f4a261' />
+      <BounceLoader size={100} loading={true} color='#f46843' />
     </div>
   )
 }
