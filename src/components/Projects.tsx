@@ -1,8 +1,6 @@
-import { motion, useAnimation } from 'framer-motion'
-import React, { useEffect } from 'react'
+import React from 'react'
 import { FaCodepen, FaGithub } from 'react-icons/fa'
 import { FiArrowRight, FiCode } from 'react-icons/fi'
-import { useInView } from 'react-intersection-observer'
 import './Projects.scss'
 import { Title } from './shared/Title'
 
@@ -41,38 +39,7 @@ const projects = [
   },
 ]
 
-const container = {
-  hidden: { opacity: 0, x: 300 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      staggerChildren: 0.2,
-      duration: 0.2,
-    },
-  },
-}
-
-const listItem = {
-  hidden: { opacity: 0, x: 300 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      stiffness: 150,
-    },
-  },
-}
-
 export const Projects = () => {
-  const animation = useAnimation()
-  const [ref, inView] = useInView({ threshold: 0.2 })
-
-  useEffect(() => {
-    if (inView) {
-      animation.start('show')
-    }
-  }, [animation, inView])
   return (
     <div className='projects-wrapper container' id='projects'>
       <Title
@@ -80,17 +47,9 @@ export const Projects = () => {
         description='I am always trying to create new projects to try new technologies,
         contribute to open source projects and expand my knowledge.'
       />
-      <motion.div
-        className='cards-wrapper'
-        variants={container}
-        initial='hidden'
-        animate={animation}
-        ref={ref}>
+      <div className='cards-wrapper'>
         {projects.map(project => (
-          <motion.div
-            className='project-card'
-            key={project.title}
-            variants={listItem}>
+          <div className='project-card' key={project.title}>
             <h3>{project.title}</h3>
             <a
               href={project.source}
@@ -114,9 +73,9 @@ export const Projects = () => {
                 <FiArrowRight /> Check it out!
               </div>
             </a>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
       <div className='profiles-wrapper'>
         <p>
           I have a lot more projects on my Github and <br /> codepen accounts,
