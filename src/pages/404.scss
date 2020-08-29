@@ -32,6 +32,9 @@
         margin-top: 10px;
         font-size: 1.5rem;
       }
+      .button-wrapper {
+        margin-top: 30px;
+      }
     }
     @media screen and (max-width: 992px) {
       flex-direction: column;
@@ -40,11 +43,15 @@
       }
       .right-side {
         align-items: center;
+        margin-top: 30px;
         h1 {
           font-size: 3rem;
         }
         h3 {
           font-size: 1rem;
+        }
+        .button-wrapper {
+          margin-top: 15px;
         }
       }
     }
