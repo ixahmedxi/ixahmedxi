@@ -13,7 +13,7 @@ const index = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const time = setTimeout(() => setIsLoading(false), 250)
+    const time = setTimeout(() => setIsLoading(false), 0)
     return () => clearTimeout(time)
   }, [])
 
