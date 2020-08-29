@@ -33,29 +33,35 @@ export const Newsletter = () => {
           Never miss any of my new projects or blog posts when I start that. I
           will not spam, I promise :)
         </p>
-        {submissionData === null && (
-          <form className='newsletter-form' onSubmit={handleSubmit}>
-            <input
-              type='email'
-              name='newsletter-email'
-              id='newsletter-email'
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              placeholder='Your email address...'
-            />
-            <button type='submit'>Subscribe!</button>
-          </form>
-        )}
-        <div className='result-message'>
-          {submissionData?.result === 'success' && <p>{submissionData.msg}</p>}
-          {submissionData?.result === 'error' && (
-            <p>
-              {submissionData.msg.includes('is already subscribed')
-                ? 'You are already subscribed :)'
-                : submissionData.msg}
-            </p>
+        <form className='newsletter-form' onSubmit={handleSubmit}>
+          {submissionData === null && (
+            <>
+              <input
+                type='email'
+                name='newsletter-email'
+                id='newsletter-email'
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                placeholder='Your email address...'
+              />
+              <button type='submit'>Subscribe!</button>
+            </>
           )}
-        </div>
+          <div
+            className={
+              submissionData !== null
+                ? 'result-message visible'
+                : 'result-message'
+            }>
+            {submissionData?.result && (
+              <p className='visible'>
+                {submissionData.msg.includes('is already subscribed')
+                  ? 'You are already subscribed :)'
+                  : submissionData.msg}
+              </p>
+            )}
+          </div>
+        </form>
       </div>
       <div className='credit'>
         <span>

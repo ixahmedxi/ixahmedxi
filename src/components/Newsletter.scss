@@ -1,8 +1,6 @@
 .newsletter-wrapper {
-  height: 400px;
   width: 100%;
-  background: url('../assets/images/newsletter-bg.jpg') center center no-repeat
-    fixed;
+  background: url('../assets/images/newsletter-bg.jpg') center center no-repeat;
   background-size: cover;
   color: var(--background);
   padding: 100px 0;
@@ -26,31 +24,45 @@
 
   .content-wrapper {
     text-align: center;
-    z-index: 999;
+    z-index: 900;
     @media screen and (max-width: 768px) {
       p {
         padding: 0 15px;
       }
     }
 
-    .result-message {
-      padding-top: 30px;
-      p {
-        font-size: 24px;
-        font-weight: 900;
-        @media screen and (max-width: 768px) {
-          font-size: 18px;
+    .newsletter-form {
+      position: relative;
+      margin: 30px 15px 0 15px;
+      height: 59px;
+      @media screen and (max-width: 768px) {
+        height: 115px;
+      }
+
+      .result-message {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50px;
+        width: 0;
+        background-color: var(--primary);
+        color: var(--text);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.visible {
+          animation: slideUpMessage 0.5s ease-out forwards;
+        }
+        p {
+          opacity: 0;
+          font-weight: 900;
+          &.visible {
+            animation: fadeInText 0.2s 0.5s ease-out forwards;
+          }
         }
       }
-    }
 
-    .newsletter-form {
-      margin: 30px 15px 0 15px;
-      display: flex;
-      justify-content: center;
-      @media screen and (max-width: 768px) {
-        flex-direction: column;
-      }
       input {
         border-radius: 5px 0 0 5px;
         width: 70%;
@@ -66,8 +78,8 @@
         }
 
         @media screen and (max-width: 768px) {
-          width: 100%;
           border-radius: 5px;
+          width: 100%;
         }
       }
 
@@ -79,9 +91,11 @@
         border-radius: 0 5px 5px 0;
         cursor: pointer;
         outline: none;
+        width: 30%;
         @media screen and (max-width: 768px) {
           margin-top: 15px;
           border-radius: 5px;
+          width: 100%;
         }
       }
     }
@@ -105,11 +119,32 @@
   .credit {
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 0px;
     opacity: 0.3;
     font-size: 12px;
+    width: 100%;
+    text-align: center;
     a {
       color: inherit;
     }
+  }
+}
+
+@keyframes slideUpMessage {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
