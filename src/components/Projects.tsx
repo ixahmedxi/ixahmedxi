@@ -93,7 +93,7 @@ export const Projects = () => {
             </div>
           </a>
           <a
-            href='https://github.com/ixahmedxi'
+            href='https://codepen.io/ixahmedxi'
             target='_blank'
             rel='noopener noreferrer'
             className='button'>
