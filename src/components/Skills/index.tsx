@@ -3,8 +3,10 @@ import {
   Firebase,
   Gatsby,
   Graphql,
+  Javascript,
   Nestjs,
   NextDotJs,
+  Postgresql,
   ReactJs,
   Svelte,
   Typescript,
@@ -39,17 +41,17 @@ export const Skills = () => {
         description="I have worked with a lot of technologies throughout the years and I'm always open to learning new things."
       />
       <div className='skills-logos'>
-        <div className='inner'>
-          <Firebase size='50px' />
-          <Graphql size='50px' />
-          <Svelte size='50px' />
-          <Typescript size='50px' />
-          <NextDotJs size='50px' />
-          <ReactJs size='50px' />
-          <Gatsby size='50px' />
-          <Apollographql size='50px' />
-          <Nestjs size='50px' />
-        </div>
+        <Firebase size='50px' />
+        <Graphql size='50px' />
+        <Svelte size='50px' />
+        <Typescript size='50px' />
+        <NextDotJs size='50px' />
+        <ReactJs size='50px' />
+        <Gatsby size='50px' />
+        <Apollographql size='50px' />
+        <Nestjs size='50px' />
+        <Javascript size='50px' />
+        <Postgresql size='50px' />
       </div>
       <div className='current-stack-wrapper'>
         <h3 className='stack-wrapper-title'>

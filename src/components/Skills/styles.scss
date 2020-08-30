@@ -12,24 +12,12 @@
     opacity: 0.3;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     svg {
       margin: 0 10px;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 992px) {
         width: 35px;
         margin: 0 5px;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      justify-content: center;
-    }
-
-    .inner {
-      @media screen and (max-width: 768px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
       }
     }
   }
