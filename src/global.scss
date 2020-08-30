@@ -43,10 +43,14 @@ h4,
 h5,
 h6,
 p {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   margin: 0;
   padding: 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 p {
@@ -68,6 +72,7 @@ strong {
   transition: 0.2s ease-in-out;
   cursor: pointer;
   outline: none;
+  font-size: 1.125rem;
 
   .inner {
     display: flex;
@@ -84,6 +89,7 @@ strong {
 
   @media screen and (max-width: 768px) {
     padding: 10px 20px;
+    font-size: 1rem;
   }
 }
 
