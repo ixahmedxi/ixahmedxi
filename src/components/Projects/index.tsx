@@ -49,7 +49,7 @@ export const Projects = () => {
       />
       <div className='cards-wrapper'>
         {projects.map(project => (
-          <div className='project-card' key={project.title}>
+          <div className='project-card' key={project.title} data-sal='slide-up'>
             <h3>{project.title}</h3>
             <a
               href={project.source}
@@ -76,7 +76,7 @@ export const Projects = () => {
           </div>
         ))}
       </div>
-      <div className='profiles-wrapper'>
+      <div className='profiles-wrapper' data-sal='slide-up'>
         <p>
           I have a lot more projects on my Github and <br /> codepen accounts,
           <strong> check them out!</strong>

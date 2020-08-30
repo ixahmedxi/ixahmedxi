@@ -7,7 +7,7 @@ import './styles.scss'
 export const Landing = () => {
   return (
     <header className='landing-wrapper' id='landing'>
-      <div className='container'>
+      <div className='container' data-sal='slide-up'>
         <div className='inner-content'>
           <h1 className='title'>Hey! I'm Ahmed Elsakaan</h1>
           <p className='description'>

@@ -8,7 +8,7 @@ interface Props {
 
 export const Title = ({ title, description }: Props) => {
   return (
-    <div className='section-title'>
+    <div className='section-title' data-sal='slide-up'>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>

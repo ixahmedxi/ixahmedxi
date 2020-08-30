@@ -23,7 +23,7 @@ export const Newsletter = () => {
 
   return (
     <div className='newsletter-wrapper'>
-      <div className='content-wrapper'>
+      <div className='content-wrapper' data-sal='slide-up'>
         <div className='icon'>
           <FiMail />
         </div>

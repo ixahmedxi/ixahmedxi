@@ -40,7 +40,7 @@ export const Skills = () => {
         title='Knowledge & skills'
         description="I have worked with a lot of technologies throughout the years and I'm always open to learning new things."
       />
-      <div className='skills-logos'>
+      <div className='skills-logos' data-sal='slide-up'>
         <Firebase size='50px' />
         <Graphql size='50px' />
         <Svelte size='50px' />
@@ -54,28 +54,30 @@ export const Skills = () => {
         <Postgresql size='50px' />
       </div>
       <div className='current-stack-wrapper'>
-        <h3 className='stack-wrapper-title'>
+        <h3 className='stack-wrapper-title' data-sal='slide-up'>
           A typical stack that I might use today for a project might use the
           following <strong>toolset</strong>, but it all comes down to the needs
           of the project and how large it is.
         </h3>
-        <div className='tree' />
-        <div className='stack-cards-wrapper'>
-          <div className='stack-card'>
-            <h3 className='stack-title'>Frontend stack</h3>
-            <ul>
-              {frontend.map(item => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </div>
-          <div className='stack-card dark'>
-            <h3 className='stack-title'>Backend stack</h3>
-            <ul>
-              {backend.map(item => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+        <div data-sal='slide-up'>
+          <div className='tree' />
+          <div className='stack-cards-wrapper'>
+            <div className='stack-card'>
+              <h3 className='stack-title'>Frontend stack</h3>
+              <ul>
+                {frontend.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className='stack-card dark'>
+              <h3 className='stack-title'>Backend stack</h3>
+              <ul>
+                {backend.map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

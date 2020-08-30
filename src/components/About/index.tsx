@@ -18,7 +18,7 @@ export const About = () => {
 
   return (
     <section className='about-wrapper'>
-      <div className='container'>
+      <div className='container' data-sal='slide-up'>
         <div className='inner-content'>
           <h1 className='about-title'>More about me</h1>
           <p className='description'>

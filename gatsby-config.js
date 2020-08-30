@@ -26,8 +26,10 @@ module.exports = {
         showSpinner: true,
       },
     },
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-source-filesystem`,
