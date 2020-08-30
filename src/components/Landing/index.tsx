@@ -4,11 +4,7 @@ import { Link } from 'react-scroll'
 import Wave from 'react-wavify'
 import './styles.scss'
 
-interface Props {
-  isLoading: boolean
-}
-
-export const Landing = ({ isLoading }: Props) => {
+export const Landing = () => {
   return (
     <header className='landing-wrapper' id='landing'>
       <div className='container'>
@@ -58,7 +54,6 @@ export const Landing = ({ isLoading }: Props) => {
       <div className='wave'>
         <Wave
           fill='#111'
-          paused={isLoading}
           options={{ height: 50, amplitude: 30, speed: 0.3, points: 3 }}
         />
       </div>

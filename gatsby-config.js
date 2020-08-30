@@ -19,6 +19,13 @@ module.exports = {
           'https://ixahmedxi.us17.list-manage.com/subscribe/post?u=9d034f3d379f9c09974dcf622&amp;id=9574f95ef1',
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#F4A261`,
+        showSpinner: true,
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
