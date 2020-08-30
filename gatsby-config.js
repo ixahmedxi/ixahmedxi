@@ -6,6 +6,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-86664929-8',
+        head: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mailchimp`,
       options: {
         endpoint:
