@@ -10,8 +10,8 @@ import {
   Typescript,
 } from '@icons-pack/react-simple-icons'
 import React from 'react'
-import { Title } from './shared/Title'
-import './Skills.scss'
+import { Title } from '../shared/Title'
+import './styles.scss'
 
 const frontend = [
   'TypeScript',

@@ -1,6 +1,6 @@
 import React from 'react'
 import BounceLoader from 'react-spinners/BounceLoader'
-import './LoadingScreen.scss'
+import './styles.scss'
 
 interface Props {
   isLoading: boolean

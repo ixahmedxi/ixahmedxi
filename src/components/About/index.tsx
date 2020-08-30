@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import React from 'react'
 import { FaCodepen } from 'react-icons/fa'
-import './About.scss'
+import './styles.scss'
 
 export const About = () => {
   const data = useStaticQuery(graphql`

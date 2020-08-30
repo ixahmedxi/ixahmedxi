@@ -1,16 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { FaCodepen, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 import Wave from 'react-wavify'
-import './Landing.scss'
+import './styles.scss'
 
-export const Landing = () => {
-  const [isPaused, setIsPaused] = useState(true)
+interface Props {
+  isLoading: boolean
+}
 
-  useEffect(() => {
-    setIsPaused(false)
-  }, [])
-
+export const Landing = ({ isLoading }: Props) => {
   return (
     <header className='landing-wrapper' id='landing'>
       <div className='container'>
@@ -61,7 +59,7 @@ export const Landing = () => {
       <div className='wave'>
         <Wave
           fill='#111'
-          paused={isPaused}
+          paused={isLoading}
           options={{ height: 50, amplitude: 30, speed: 0.3, points: 3 }}
         />
       </div>

@@ -1,7 +1,7 @@
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import React, { useState } from 'react'
 import { FiMail } from 'react-icons/fi'
-import './Newsletter.scss'
+import './styles.scss'
 
 interface FormSubmissionResult {
   result: 'success' | 'error'

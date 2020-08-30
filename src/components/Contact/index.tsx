@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiRefreshCcw, FiSend } from 'react-icons/fi'
-import './Contact.scss'
-import { Title } from './shared/Title'
+import { Title } from '../shared/Title'
+import './styles.scss'
 
 export const Contact = () => {
   return (

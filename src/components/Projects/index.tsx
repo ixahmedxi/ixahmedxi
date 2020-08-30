@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaCodepen, FaGithub } from 'react-icons/fa'
 import { FiArrowRight, FiCode } from 'react-icons/fi'
-import './Projects.scss'
-import { Title } from './shared/Title'
+import { Title } from '../shared/Title'
+import './styles.scss'
 
 const projects = [
   {

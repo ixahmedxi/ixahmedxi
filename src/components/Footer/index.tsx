@@ -1,7 +1,7 @@
 import React from 'react'
 import { FiHeart } from 'react-icons/fi'
 import { animateScroll } from 'react-scroll'
-import './Footer.scss'
+import './styles.scss'
 
 export const Footer = () => {
   return (

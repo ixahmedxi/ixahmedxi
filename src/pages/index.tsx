@@ -21,7 +21,7 @@ const index = () => {
     <div>
       <SEO />
       <LoadingScreen isLoading={isLoading} />
-      <Landing />
+      <Landing isLoading={isLoading} />
       <About />
       <Skills />
       <Projects />

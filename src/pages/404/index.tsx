@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
-import illustration from '../assets/images/illustration.svg'
-import './404.scss'
+import illustration from '../../assets/images/illustration.svg'
+import './styles.scss'
 
 const NotFound = ({ data }: any) => {
   return (
