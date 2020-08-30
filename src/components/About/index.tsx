@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import React from 'react'
-import { FaCodepen } from 'react-icons/fa'
 import './styles.scss'
 
 export const About = () => {
@@ -23,27 +22,20 @@ export const About = () => {
         <div className='inner-content'>
           <h1 className='about-title'>More about me</h1>
           <p className='description'>
-            I am a full stack web developer from Egypt & a computer science
-            freshman at Royal Holloway University of London. I have always been
-            intriguied as to how websites and applications are made and from the
-            age of 16 I started playing around with HTML and CSS. Over the years
-            I have accumelated a lot of skills and knowledge in both the
-            frontend and the backend side of things. I am currently learning
-            React Native and flutter & working on lop.si and next-boilerpack.
-            <br /> <br />
-            When I am not programming, I like to enjoy doing some of my hobbies,
-            these include swimming, football, playing some video games and
-            watching Formula 1 or going out with friends :)
+            I started programming at around the age of 16. One day, I randomly
+            started to wonder as to how websites are made. That's when I started
+            playing around with HTML and CSS. It took me a couple of months to
+            get comfortable with these two, and that's when I decided to learn
+            my first programming language, JavaScript to add to my toolset. I
+            didn’t get comfortable with JavaScript until a year of using it.
+            This allowed me to dive deeper into the vast world of web
+            development, one which I still learn new things in day by day. I
+            decided to pursue it as a career, a goal which I am still working on
+            towards to this day. I will hopefully earn my computer science
+            degree in 2023, from there, I can't wait to see what the future
+            holds. I am always striving to improve my skills and to make better
+            projects, ones that I am proud of.
           </p>
-          <a
-            href='https://codepen.io/ixahmedxi'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='codepen-button'>
-            <div className='inner'>
-              <FaCodepen /> My codepen profile
-            </div>
-          </a>
         </div>
         <div className='profile-wrapper'>
           <Img

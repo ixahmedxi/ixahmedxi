@@ -1,8 +1,8 @@
 .contact-wrapper {
-  padding: 100px 0;
+  padding: 200px 0;
 
   @media screen and (max-width: 768px) {
-    padding: 50px 0;
+    padding: 100px 0;
   }
 
   form {
@@ -10,7 +10,6 @@
       padding: 0 15px;
     }
     .row {
-      margin-top: 50px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;

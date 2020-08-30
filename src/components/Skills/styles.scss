@@ -1,12 +1,14 @@
 .skills-wrapper {
-  padding-top: 100px;
+  padding-top: 200px;
 
   @media screen and (max-width: 768px) {
-    padding-top: 50px;
+    padding-top: 100px;
   }
 
   .skills-logos {
-    margin: 30px auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0.3;
     display: flex;
     justify-content: center;
@@ -36,7 +38,7 @@
     text-align: center;
 
     .stack-wrapper-title {
-      width: 35%;
+      width: 50%;
       line-height: 1.5;
       margin: 0 auto;
       @media screen and (max-width: 768px) {

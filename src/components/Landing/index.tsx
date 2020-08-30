@@ -16,11 +16,10 @@ export const Landing = ({ isLoading }: Props) => {
           <h1 className='title'>Hey! I'm Ahmed Elsakaan</h1>
           <p className='description'>
             I am a <strong>full stack web developer</strong> from{' '}
-            <strong>Egypt</strong> who’s currently pursuing a{' '}
+            <strong>Egypt</strong>, currently pursuing a{' '}
             <strong>BSc computer science degree</strong> at{' '}
             <strong>Royal Holloway University of London</strong>. I specialise
-            in <strong>Reactjs</strong> on the frontend and{' '}
-            <strong>Nodejs</strong> on the backend.
+            in <strong>React</strong> and <strong>Node</strong>.
           </p>
           <Link
             to='projects'

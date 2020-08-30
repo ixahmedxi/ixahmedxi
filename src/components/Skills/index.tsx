@@ -36,8 +36,7 @@ export const Skills = () => {
     <div className='skills-wrapper container'>
       <Title
         title='Knowledge & skills'
-        description='I have worked with a lot of technologies throughout the years and am
-          always trying to improve and broaden my abilities'
+        description="I have worked with a lot of technologies throughout the years and I'm always open to learning new things."
       />
       <div className='skills-logos'>
         <div className='inner'>
@@ -54,8 +53,9 @@ export const Skills = () => {
       </div>
       <div className='current-stack-wrapper'>
         <h3 className='stack-wrapper-title'>
-          If I would currently create a new web application project, it would
-          probably use the following <strong>tech stack</strong>:
+          A typical stack that I might use today for a project might use the
+          following <strong>toolset</strong>, but it all comes down to the needs
+          of the project and how large it is.
         </h3>
         <div className='tree' />
         <div className='stack-cards-wrapper'>
