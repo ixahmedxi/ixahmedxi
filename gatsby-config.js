@@ -1,43 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Ahmed Elsakaan`,
-    description: `Full stack web developer and computer science student, passionate about making highly performant, accessible and responsive websites.`,
-    author: `@ixahmedxii`,
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-86664929-8',
-        head: true,
-        anonymize: true,
-        respectDNT: true,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mailchimp`,
-      options: {
-        endpoint:
-          'https://ixahmedxi.us17.list-manage.com/subscribe/post?u=9d034f3d379f9c09974dcf622&amp;id=9574f95ef1',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-nprogress`,
-      options: {
-        color: `#F4A261`,
-        showSpinner: true,
-      },
-    },
-    `gatsby-plugin-scroll-reveal`,
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-netlify-cache`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`,
+        path: `${__dirname}/src/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -48,11 +21,14 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#eeeeee`,
-        theme_color: `#F4A261`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/icon.svg`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
