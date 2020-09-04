@@ -2,8 +2,8 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   extends: [
     'standard-with-typescript',
@@ -21,12 +21,12 @@ module.exports = {
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
     'prettier/react',
-    'prettier/@typescript-eslint'
+    'prettier/@typescript-eslint',
   ],
   env: {
     node: true,
     jest: true,
-    browser: true
+    browser: true,
   },
   rules: {
     'jsx-a11y/anchor-is-valid': 0,
@@ -39,10 +39,12 @@ module.exports = {
       {
         cases: {
           camelCase: true,
-          pascalCase: true
-        }
-      }
+          pascalCase: true,
+        },
+      },
     ],
+
+    '@typescript-eslint/no-unsafe-return': 0,
 
     'promise/always-return': 0,
 
@@ -51,7 +53,7 @@ module.exports = {
 
     '@typescript-eslint/no-unused-vars': [
       1,
-      { vars: 'all', args: 'all', varsIgnorePattern: '^jsx$' }
+      { vars: 'all', args: 'all', varsIgnorePattern: '^jsx$' },
     ],
 
     '@typescript-eslint/explicit-module-boundary-types': 0,
@@ -79,7 +81,7 @@ module.exports = {
     // react-testing-library can test without expect
     'jest/expect-expect': 0,
 
-    '@typescript-eslint/no-unsafe-member-access': 0
+    '@typescript-eslint/no-unsafe-member-access': 0,
   },
-  ignorePatterns: ['**/*.js', 'next-env.d.ts']
+  ignorePatterns: ['**/*.js', 'next-env.d.ts'],
 }

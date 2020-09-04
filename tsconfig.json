@@ -9,7 +9,7 @@
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDir": "src",
+    "rootDir": ".",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -27,6 +27,7 @@
     "webpack",
     "jest",
     "src/setupTests.ts",
-    "gatsby-*.js"
+    "gatsby-*.js",
+    "jest-*.js"
   ]
 }
