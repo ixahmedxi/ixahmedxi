@@ -8,7 +8,7 @@ export const HamburgerIcon = () => {
       animate={{ y: '0vh' }}
       initial={{ y: '-100vh' }}
       transition={{ ease: 'easeOut', duration: 1 }}>
-      <FiMenu size={35} />
+      <FiMenu size={40} />
     </motion.div>
   )
 }

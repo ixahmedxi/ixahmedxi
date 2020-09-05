@@ -12,11 +12,21 @@ describe('Home Page', () => {
           title: 'GatsbyJS',
         },
       },
+      placeholderImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `pretend-i-am-a-base64-encoded-image`,
+            srcSet: `asdfasdf`,
+          },
+        },
+      },
     }))
   })
   test('it renders', () => {
     const { getByText } = render(<IndexPage />)
 
-    expect(getByText('Hi people')).toBeInTheDocument()
+    expect(getByText("I'm Ahmed Elsakaan")).toBeInTheDocument()
   })
 })
