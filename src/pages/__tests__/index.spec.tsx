@@ -27,6 +27,6 @@ describe('Home Page', () => {
   test('it renders', () => {
     const { getByText } = render(<IndexPage />)
 
-    expect(getByText("I'm Ahmed Elsakaan")).toBeInTheDocument()
+    expect(getByText('Hello World')).toBeInTheDocument()
   })
 })
