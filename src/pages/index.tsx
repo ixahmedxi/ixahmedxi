@@ -1,20 +1,14 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import { Landing } from '../components/Landing/Landing'
 import SEO from '../components/seo'
-import { Container } from '../components/shared/Container'
-
-const Text = styled('h1')`
-  color: dodgerblue;
-`
 
 const IndexPage = () => {
   return (
-    <Container>
+    <main>
       <SEO title='Home' />
-      <div>
-        <Text>Hello World</Text>
-      </div>
-    </Container>
+      <Landing />
+      <div style={{ height: '100vh' }} />
+    </main>
   )
 }
 
