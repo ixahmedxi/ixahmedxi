@@ -7,7 +7,7 @@ const IndexPage = () => {
     <main>
       <SEO title='Home' />
       <Landing />
-      <div style={{ height: '100vh' }} />
+      <div style={{ height: '100vh', backgroundColor: '#111' }} />
     </main>
   )
 }

@@ -1,3 +1,4 @@
+import { motion, Variants } from 'framer-motion'
 import React from 'react'
 import { FaLongArrowAltRight } from 'react-icons/fa'
 import styled from 'styled-components'
@@ -5,9 +6,10 @@ import styled from 'styled-components'
 interface Props {
   text: string
   href: string
+  variants: Variants
 }
 
-const Link = styled('a')`
+const Link = styled(motion.a)`
   text-decoration: none;
   color: white;
   background-color: #6046f1;
@@ -22,9 +24,9 @@ const Link = styled('a')`
   }
 `
 
-export const PrimaryButton = ({ text, href }: Props) => {
+export const PrimaryButton = ({ text, href, variants }: Props) => {
   return (
-    <Link href={href}>
+    <Link href={href} variants={variants}>
       <span>
         {text} <FaLongArrowAltRight size={25} style={{ marginLeft: '15px' }} />
       </span>
