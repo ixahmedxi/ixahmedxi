@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { Landing } from '../components/Landing/Landing'
 import SEO from '../components/seo'
+import { Work } from '../components/Work/Work'
 
 const IndexPage = () => {
   return (
     <main>
       <SEO title='Home' />
       <Landing />
-      <div style={{ height: '100vh', backgroundColor: '#111' }} />
+      <Work />
     </main>
   )
 }
