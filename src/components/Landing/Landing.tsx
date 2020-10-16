@@ -22,7 +22,7 @@ const GridLayout = styled('div')`
 `
 
 const ProfileWrapper = styled(motion.div)`
-  max-width: 400px;
+  max-width: 500px;
   overflow: hidden;
   position: absolute;
   right: 100px;
