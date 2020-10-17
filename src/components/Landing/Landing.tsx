@@ -64,7 +64,7 @@ const profileImageVariants = {
 
 export const Landing = () => {
   return (
-    <LandingWrapper>
+    <LandingWrapper id='#landing'>
       <Container>
         <GridLayout>
           <MainContent />
