@@ -12,7 +12,7 @@ const AboutSectionWrapper = styled('section')`
 
 const GridLayout = styled('div')`
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
 `
 
 const Title = styled('h1')`
@@ -24,7 +24,7 @@ const Title = styled('h1')`
 
 const IllustrationWrapper = styled('div')`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 `
 
