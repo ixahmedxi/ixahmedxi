@@ -21,14 +21,14 @@ const Lines = styled('div')`
   width: 16px;
   height: 16px;
   background-color: #6046f1;
-  margin: 30px auto;
+  margin: 15px auto;
   border-radius: 8px;
   position: relative;
   &::before {
     content: '';
     position: absolute;
     width: 2px;
-    height: 50px;
+    height: 35px;
     background-color: #6046f1;
     left: calc(50% - 1px);
     top: 16px;
@@ -51,7 +51,7 @@ const Card = styled('div')<{ left?: boolean }>`
 
   ul {
     text-align: left;
-    margin-top: 30px;
+    margin-top: 15px;
     padding-left: 75px;
     li {
       line-height: 2;

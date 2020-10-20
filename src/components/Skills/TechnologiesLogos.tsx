@@ -26,7 +26,7 @@ const color = 'rgba(255, 255, 255, 0.3)'
 const Wrapper = styled('div')`
   display: flex;
   justify-content: center;
-  margin: 25px 0;
+  margin: 15px 0;
 `
 
 const IconsWrapper = styled('div')`

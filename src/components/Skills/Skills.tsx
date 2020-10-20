@@ -9,7 +9,7 @@ const SkillsWrapper = styled('section')`
   background-color: #111;
   color: #fff;
   box-sizing: border-box;
-  padding: 100px 0;
+  padding: 50px 0;
 `
 
 export const Skills = () => {
