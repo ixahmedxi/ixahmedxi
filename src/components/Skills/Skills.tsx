@@ -9,15 +9,23 @@ const SkillsWrapper = styled('section')`
   background-color: #111;
   color: #fff;
   box-sizing: border-box;
-  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const InnerWrapper = styled('div')`
+  width: 100%;
 `
 
 export const Skills = () => {
   return (
     <SkillsWrapper id='#skills'>
-      <Heading />
-      <TechnologiesLogos />
-      <CurrentStack />
+      <InnerWrapper>
+        <Heading />
+        <TechnologiesLogos />
+        <CurrentStack />
+      </InnerWrapper>
     </SkillsWrapper>
   )
 }
