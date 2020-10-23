@@ -33,18 +33,30 @@ const Input = styled('input')`
   border-radius: 100px;
   box-sizing: border-box;
   margin-top: 15px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease-out;
+
+  &:focus {
+    border-color: #6046f1;
+  }
 `
 
 const TextArea = styled('textarea')`
   width: 100%;
   height: 300px;
-  border: none;
+  border: 2px solid transparent;
   background-color: #f7f7f7;
   box-sizing: border-box;
   padding: 30px;
   border-radius: 30px;
   margin-top: 15px;
   resize: none;
+  outline: none;
+  transition: border-color 0.2s ease-out;
+
+  &:focus {
+    border-color: #6046f1;
+  }
 `
 
 const ButtonsWrapper = styled('div')`
@@ -64,6 +76,7 @@ const SubmitButton = styled('button')`
   text-transform: uppercase;
   border: none;
   margin-left: 30px;
+  cursor: pointer;
   span {
     display: flex;
     align-items: center;
