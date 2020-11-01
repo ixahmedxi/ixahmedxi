@@ -21,14 +21,14 @@ const Lines = styled('div')`
   width: 16px;
   height: 16px;
   background-color: #6046f1;
-  margin: 15px auto;
+  margin: 0 auto;
   border-radius: 8px;
   position: relative;
   &::before {
     content: '';
     position: absolute;
     width: 2px;
-    height: 35px;
+    height: 20px;
     background-color: #6046f1;
     left: calc(50% - 1px);
     top: 16px;
@@ -110,11 +110,11 @@ export const CurrentStack = () => {
           <CardTitle>Backend</CardTitle>
           <ul>
             <li>TypeScript</li>
-            <li>React</li>
-            <li>Gatsby or Next.js</li>
-            <li>theme-ui, styled-components or sass</li>
-            <li>Apollo GraphQL or Axios</li>
-            <li>Context API</li>
+            <li>Node.js</li>
+            <li>Nest.js or Express</li>
+            <li>TypeORM or MikroORM</li>
+            <li>GraphQL</li>
+            <li>PostgreSQL or MongoDB</li>
           </ul>
         </Card>
       </CardsWrapper>
