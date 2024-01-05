@@ -16,7 +16,7 @@
     "lint": "eslint --ext .astro,.cjs,.mjs,.js,.jsx,.ts,.tsx . --max-warnings 0",
     "lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\"",
     "lint:spelling": "cspell \"**\"",
-    "prepare": "panda codegen",
+    "prepare": "husky install && panda codegen",
     "preview": "astro preview",
     "start": "astro dev"
   },
@@ -44,6 +44,8 @@
     "eslint-plugin-import": "npm:eslint-plugin-i@latest",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-regexp": "^2.1.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "markdownlint": "^0.32.1",
     "markdownlint-cli": "^0.38.0",
     "pandacss-preset-radix-colors": "^0.2.0",

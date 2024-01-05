@@ -1,0 +1,5 @@
+{
+  "*": ["prettier --list-different", "cspell"],
+  "*.{md,mdx}": ["markdownlint"],
+  "*.{ts,tsx,astro,js,cjs,mjs,jsx}": ["eslint"]
+}
