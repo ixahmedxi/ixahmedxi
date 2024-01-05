@@ -11,11 +11,20 @@ const config = {
     'plugin:regexp/recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
+    'plugin:import/recommended',
+    'plugin:import/typescript',
     'plugin:astro/jsx-a11y-strict',
     'plugin:astro/recommended',
     'prettier',
   ],
+  settings: {
+    'import/resolver': {
+      typescript: true,
+      node: true,
+    },
+  },
   rules: {
+    'import/no-unresolved': ['error', { ignore: ['^astro:content'] }],
     '@typescript-eslint/array-type': [
       'error',
       {
