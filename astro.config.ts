@@ -1,9 +1,11 @@
-import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import pandacss from '@pandacss/astro'
+import pandacss from '@pandacss/astro';
+import { defineConfig } from 'astro/config';
+
+import { siteConfig } from './src/siteConfig';
 
 export default defineConfig({
-  site: 'https://example.com',
-  integrations: [mdx(), sitemap(), pandacss()]
+  site: siteConfig.site,
+  integrations: [mdx(), sitemap(), pandacss()],
 });
