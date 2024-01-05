@@ -28,6 +28,8 @@
     "@astrojs/check": "^0.3.4",
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/sitemap": "^3.0.4",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@pandacss/astro": "^0.24.2",
     "@pandacss/dev": "^0.24.2",

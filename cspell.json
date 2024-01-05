@@ -12,6 +12,7 @@
     "astro",
     "astrojs",
     "codegen",
+    "commitlint",
     "datetime",
     "Elsakaan",
     "Elsakaan's",
@@ -22,7 +23,7 @@
     "packagejson",
     "pandacss",
     "tsconfigs",
-    "webp",
-    "typeof"
+    "typeof",
+    "webp"
   ]
 }
