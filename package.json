@@ -25,7 +25,9 @@
     "@astrojs/sitemap": "^3.0.4",
     "@pandacss/astro": "^0.24.2",
     "@pandacss/dev": "^0.24.2",
+    "@radix-ui/colors": "^3.0.0",
     "cspell": "latest",
+    "pandacss-preset-radix-colors": "^0.2.0",
     "typescript": "^5.3.3"
   }
 }
