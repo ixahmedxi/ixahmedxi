@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "ignorePaths": [
+    "node_modules",
+    ".astro",
+    "dist",
+    "styled-system",
+    "bun.lockb"
+  ],
+  "words": [
+    "astro",
+    "astrojs",
+    "lockb",
+    "pandacss",
+    "Elsakaan",
+    "ixahmedxi",
+    "Elsakaan's",
+    "codegen",
+    "outdir",
+    "tsconfigs",
+    "datetime",
+    "webp"
+  ]
+}

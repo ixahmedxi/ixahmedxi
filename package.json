@@ -7,6 +7,7 @@
   "author": "Ahmed Elsakaan",
   "license": "AGPL-3.0-or-later",
   "scripts": {
+    "lint:spelling": "cspell \"**\"",
     "prepare": "panda codegen",
     "dev": "astro dev",
     "start": "astro dev",
@@ -20,10 +21,11 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.4",
-    "@astrojs/sitemap": "^3.0.4",
     "@astrojs/mdx": "^2.0.3",
+    "@astrojs/sitemap": "^3.0.4",
     "@pandacss/astro": "^0.24.2",
     "@pandacss/dev": "^0.24.2",
+    "cspell": "latest",
     "typescript": "^5.3.3"
   }
 }
