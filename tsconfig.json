@@ -3,5 +3,13 @@
   "compilerOptions": {
     "strictNullChecks": true
   },
-  "include": ["styled-system", "src"]
+  "include": [
+    "styled-system",
+    "src",
+    ".eslintrc.cjs",
+    "prettier.config.js",
+    "panda.config.ts",
+    "astro.config.ts",
+    "astro.d.ts"
+  ]
 }
