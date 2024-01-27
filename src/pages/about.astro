@@ -1,0 +1,193 @@
+---
+import { css } from '../../styled-system/css';
+import Base from '../layouts/Base.astro';
+
+const textStyles = css({
+  '&>h1': {
+    textStyle: {
+      base: '2xl',
+      md: '3xl',
+      lg: '4xl',
+    },
+    color: 'gray.12',
+    mb: 6,
+    fontWeight: 'semibold',
+  },
+  '&>h2': {
+    textStyle: {
+      base: 'lg',
+      md: 'xl',
+      lg: '2xl',
+    },
+    color: 'gray.12',
+    mb: 4,
+    fontWeight: 'medium',
+  },
+  '&>p': {
+    mb: 6,
+    lineHeight: 'relaxed',
+  },
+});
+---
+
+<Base>
+  <main
+    class={css({
+      maxW: '5xl',
+      mx: 'auto',
+      display: 'flex',
+      gap: {
+        base: 6,
+        lg: 12,
+      },
+      flexDir: {
+        base: 'column',
+        lg: 'row',
+      },
+      py: 24,
+    })}
+  >
+    <div class={textStyles}>
+      <h1>It all started with a bit of curiosity...</h1>
+      <p>
+        You see I have always been a child intrigued by all sorts of technology.
+        I used to disassemble different gadgets around the house just because I
+        was curious about their internals. Often than not though, I
+        wouldn&apos;t be able to put it back together.<br /><br />In 2011, my
+        curiosity transferred to the digital side with my first laptop, it was
+        an HP Pavilion, that&apos;s all I remember. I got into making football
+        shoe mods for PES 2011 using Windows Paint, yes I did literally edit it
+        pixel by pixel...
+      </p>
+      <h2>Chapter 1: “How are websites made?”</h2>
+      <p>
+        In 2014, I was browsing the internet on a random late night when
+        suddenly the question behind the process of making websites arose in my
+        mind. I googled “How are websites made?” and it led me to HTML and CSS.<br
+        /><br />I started playing around with these two, learned them a bit and
+        it really grasped my interest, from that point on I would be doing web
+        dev.
+      </p>
+      <h2>Chapter 2: JavaScript is so hard</h2>
+      <p>
+        With my progress in HTML and CSS, I started needing to use JavaScript in
+        my projects to sprinkle some interactivity. I played around with JS and
+        jQuery, but it would take me a while to really unlock the “thinking in
+        javascript” phase of my life. With that though, I was able to expand the
+        scope of my projects and eventually started learning React.
+      </p>
+      <h2>Chapter 3: JavaScript is cool</h2>
+      <p>
+        Now that I was learning and using React, it unlocked a lot of new
+        opportunities for me, I was doing a lot projects on codepen to refine my
+        CSS and React skills and since then I truly felt like a web developer. I
+        had more confidence in my skills from then on and I would then go on
+        Github from then on.
+      </p>
+      <h2>Chapter 4: It&apos;s university time</h2>
+      <p>
+        After finishing high school, I decided to pursue a BSc Computer Science
+        degree in the UK. By that point I was certain that I want to do web dev
+        for a career and so it was the right decision for me. I would further
+        refine my skills in web development during my time at university with me
+        landing a part time internship at Decipad.
+      </p>
+      <h2>Chapter 5: Open source</h2>
+      <p>
+        After my internship, I got a taste of working in a team, and I
+        wasn&apos;t going to let that slip away. I started looking at
+        contributing to open source. I was watching Jack Herrington&apos;s video
+        on tRPC and it was so cool to me, I went on tRPC&apos;s website to be a
+        bit disappointed in the landing page and the docs, and so that would be
+        where I would contribute.
+      </p>
+      <h2>Final chapter: The tRPC butterfly effect</h2>
+      <p>
+        With me working on a new design and website for tRPC, I managed to make
+        connections with really cool people such as Alex in the web dev
+        community. I got invited to speak at an LNUG meetup in London about
+        tRPC.<br /><br />That meetup would soon become a crucial part of me
+        getting my first full time job after university, as that I would meet my
+        current boss at the meetup.<br /><br />So basically, Jack Herrington
+        uploading that video led to a person on the other side landing their
+        first web dev job.<br /><br />To be continued...
+      </p>
+    </div>
+    <div>
+      <h1
+        class={css({
+          textStyle: {
+            base: '2xl',
+            md: '3xl',
+            lg: '4xl',
+          },
+          color: 'gray.12',
+          mb: 6,
+          fontWeight: 'semibold',
+          display: {
+            base: 'block',
+            lg: 'none',
+          },
+        })}
+      >
+        Picture Gallery
+      </h1>
+      <div
+        class={css({
+          display: 'flex',
+          flexDir: { base: 'row', lg: 'column' },
+          gap: 8,
+          flexWrap: {
+            base: 'wrap',
+            lg: 'nowrap',
+          },
+          w: {
+            base: 'auto',
+            lg: '333px',
+          },
+        })}
+      >
+        <div>
+          <img
+            src="/gallery/montaza.png"
+            width="333px"
+            alt="2008 Ahmed In front of The Montaza Palace, Alexandria, Egypt. "
+          />
+          <p class={css({ textStyle: 'xs', color: 'gray.10', pt: 2 })}>
+            2008, In Front of The Montaza Palace, Alexandria, Egypt.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/gallery/candy.png"
+            width="333px"
+            alt="Me with my first cat, Candy, she was a princess."
+          />
+          <p class={css({ textStyle: 'xs', color: 'gray.10', pt: 2 })}>
+            Me with my first cat, Candy, she was a princess.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/gallery/meetup.png"
+            width="333px"
+            alt="Talking about tRPC at an LNUG meetup."
+          />
+          <p class={css({ textStyle: 'xs', color: 'gray.10', pt: 2 })}>
+            Talking about tRPC at an LNUG meetup.
+          </p>
+        </div>
+        <div>
+          <img
+            src="/gallery/trpc.png"
+            width="333px"
+            alt="Meeting some of the tRPC people."
+          />
+          <p class={css({ textStyle: 'xs', color: 'gray.10', pt: 2 })}>
+            Meeting some of the tRPC people.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+</Base>

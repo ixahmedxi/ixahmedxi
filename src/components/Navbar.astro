@@ -1,0 +1,90 @@
+---
+import { css, cx } from '../../styled-system/css';
+
+const pathname = new URL(Astro.request.url).pathname;
+
+const styles = {
+  wrapper: css({
+    display: 'flex',
+    justifyContent: 'center',
+    position: 'fixed',
+    w: 'full',
+    left: 0,
+    top: 0,
+    px: 6,
+    py: 4,
+    bg: 'gray.1',
+    zIndex: 999,
+  }),
+  listWrapper: css({
+    display: 'flex',
+  }),
+  link: css({
+    px: 3,
+    transition: 'colors',
+    _hover: {
+      color: 'gray.12',
+    },
+  }),
+  activeLink: css({
+    color: 'gray.12',
+  }),
+};
+---
+
+<nav class={styles.wrapper}>
+  <ul class={styles.listWrapper}>
+    <li>
+      <a
+        href="/"
+        class={cx(styles.link, pathname === '/' && styles.activeLink)}
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        href="/about"
+        class={cx(
+          styles.link,
+          pathname.startsWith('/about') && styles.activeLink,
+        )}
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        href="/blog"
+        class={cx(
+          styles.link,
+          pathname.startsWith('/blog') && styles.activeLink,
+        )}
+      >
+        Blog
+      </a>
+    </li>
+    <li>
+      <a
+        href="/work"
+        class={cx(
+          styles.link,
+          pathname.startsWith('/work') && styles.activeLink,
+        )}
+      >
+        Work
+      </a>
+    </li>
+    <li>
+      <a
+        href="/contact"
+        class={cx(
+          styles.link,
+          pathname.startsWith('/contact') && styles.activeLink,
+        )}
+      >
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>

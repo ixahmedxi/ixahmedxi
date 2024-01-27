@@ -1,46 +1,206 @@
 ---
 import { getCollection } from 'astro:content';
+import { Rss, Youtube } from 'lucide-astro';
 
-import BaseHead from '../../components/BaseHead.astro';
+import { css } from '../../../styled-system/css';
 import FormattedDate from '../../components/FormattedDate.astro';
+import Base from '../../layouts/Base.astro';
+import { siteConfig } from '../../siteConfig';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
 );
+
+const [latestPost, ...otherPosts] = posts;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead
-      title="Blog - Ahmed Elsakaan"
-      description="A blog where I share any interesting findings and my passions in the web development space."
-    />
-  </head>
-  <body>
-    <main>
-      <section>
-        <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <a href={`/blog/${post.slug}/`}>
-                  <img
-                    width={720}
-                    height={360}
-                    src={post.data.heroImage}
-                    alt=""
-                  />
-                  <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-  </body>
-</html>
+<Base
+  title="Blog - Ahmed Elsakaan"
+  description="A blog where I share any interesting findings and my passions in the web development space."
+>
+  <main
+    class={css({
+      maxW: '5xl',
+      mx: 'auto',
+      py: 24,
+    })}
+  >
+    <div
+      class={css({
+        pb: 8,
+        display: 'flex',
+        flexDir: { base: 'column', md: 'row' },
+        alignItems: { base: 'flex-start', md: 'center' },
+        justifyContent: 'space-between',
+      })}
+    >
+      <div
+        class={css({
+          display: 'flex',
+          flexDir: 'column',
+          gap: 2,
+          order: { base: 1, md: 0 },
+        })}
+      >
+        <h1
+          class={css({
+            textStyle: {
+              base: '2xl',
+              md: '3xl',
+              lg: '4xl',
+            },
+            fontWeight: 'semibold',
+            color: 'gray.12',
+            lineHeight: 'snug',
+          })}
+        >
+          The Ahmed Blog
+        </h1>
+        <p>
+          A series of blog posts about web tooling, monorepos and the react
+          ecosystem.
+        </p>
+      </div>
+      <div class={css({ order: { base: 0, md: 1 }, pb: { base: 3, md: 0 } })}>
+        <a
+          href="/rss.xml"
+          class={css({
+            display: 'flex',
+            alignItems: 'center',
+            textStyle: 'sm',
+            gap: 2,
+            transition: 'colors',
+            _hover: {
+              color: 'gray.12',
+            },
+          })}><Rss size={16} /> RSS</a
+        >
+      </div>
+    </div>
+
+    <section>
+      {
+        latestPost && (
+          <a
+            href={`/blog/${latestPost.slug}/`}
+            class={css({ mb: { base: 6, md: 12 }, display: 'block' })}
+          >
+            <img
+              src={latestPost.data.heroImage ?? ''}
+              width="100%"
+              alt="Hero"
+              class={css({ borderRadius: 'xl' })}
+            />
+            <h4
+              class={css({
+                pt: 6,
+                textStyle: {
+                  base: 'lg',
+                  md: '2xl',
+                },
+                color: 'gray.12',
+                mb: 4,
+                fontWeight: 'medium',
+              })}
+            >
+              {latestPost.data.title}
+            </h4>
+            <p
+              class={css({
+                maxW: '80ch',
+                lineClamp: '2',
+                textStyle: { base: 'sm', md: 'md' },
+              })}
+            >
+              {latestPost.data.description}
+            </p>
+            <p
+              class={css({
+                pt: 4,
+                textStyle: { base: 'xs', md: 'sm' },
+                color: 'gray.10',
+              })}
+            >
+              <FormattedDate date={latestPost.data.pubDate} /> ▲ 10 min read
+            </p>
+          </a>
+        )
+      }
+      <ul
+        class={css({
+          display: 'grid',
+          gridTemplateColumns: {
+            base: '1fr',
+            md: 'repeat(3, 1fr)',
+          },
+          gap: {
+            base: 6,
+            md: 12,
+          },
+        })}
+      >
+        {
+          otherPosts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}/`}>
+                <img
+                  src={post.data.heroImage ?? ''}
+                  alt="Hero"
+                  class={css({ borderRadius: 'lg' })}
+                />
+                <h4
+                  class={css({
+                    pt: 6,
+                    mb: 4,
+                    textStyle: 'lg',
+                    color: 'gray.12',
+                    fontWeight: 'medium',
+                  })}
+                >
+                  {post.data.title}
+                </h4>
+                <p class={css({ textStyle: 'sm', lineClamp: '2' })}>
+                  {post.data.description}
+                </p>
+                <p class={css({ textStyle: 'xs', color: 'gray.10', pt: 4 })}>
+                  <FormattedDate date={post.data.pubDate} /> ▲ 10 min read
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+    <footer
+      class={css({
+        display: 'flex',
+        justifyContent: 'center',
+        pt: { base: 12, md: 24 },
+      })}
+    >
+      <a
+        href={siteConfig.youtube}
+        target="_blank"
+        rel="noreferrer noopener"
+        class={css({
+          textStyle: {
+            base: 'sm',
+            md: 'md',
+          },
+          display: 'flex',
+          alignItems: 'center',
+          gap: 3,
+          transition: 'colors',
+          _hover: {
+            color: 'gray.12',
+          },
+          '&>svg': {
+            strokeWidth: 1.5,
+          },
+        })}
+      >
+        <Youtube size={16} /> Browse more topics on my YouTube channel
+      </a>
+    </footer>
+  </main>
+</Base>

@@ -1,16 +1,161 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import { getCollection } from 'astro:content';
+import { MoveRight } from 'lucide-astro';
+
+import { css } from '../../styled-system/css';
+import BlogItem from '../components/BlogItem.astro';
+import Base from '../layouts/Base.astro';
+import { siteConfig } from '../siteConfig';
+
+const styles = {
+  button: css({
+    display: 'flex',
+    gap: 3,
+    color: 'gray.12',
+    fontWeight: 'medium',
+    transition: 'all',
+    position: 'relative',
+    _before: {
+      content: '""',
+      position: 'absolute',
+      bottom: '-6px',
+      left: 0,
+      w: 'full',
+      h: '1.5px',
+      bg: 'gray.12',
+      transform: 'scaleX(0)',
+      transformOrigin: 'bottom left',
+      transition: 'all',
+    },
+    _hover: {
+      _before: {
+        transform: 'scaleX(1)',
+      },
+    },
+    '&>svg': {
+      strokeWidth: 1.5,
+    },
+  }),
+};
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
+  .slice(0, 3);
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead />
-  </head>
-  <body>
-    <main>
-      <h1>Hello World</h1>
-      <a href="/blog">Blog</a>
-    </main>
-  </body>
-</html>
+<Base>
+  <main
+    class={css({
+      maxW: '3xl',
+      mx: 'auto',
+      minH: '100dvh',
+      display: 'flex',
+      alignItems: 'center',
+    })}
+  >
+    <div class={css({ py: 24 })}>
+      <div
+        class={css({
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 4,
+        })}
+      >
+        <h1
+          class={css({
+            textStyle: {
+              base: '2xl',
+              md: '3xl',
+              lg: '4xl',
+            },
+            fontWeight: 'semibold',
+            color: 'gray.12',
+            lineHeight: 'snug',
+          })}
+        >
+          👋 Hey! I&apos;m Ahmed Elsakaan and I build stuff for the web.
+        </h1>
+        <p
+          class={css({
+            lineHeight: '1.5',
+            '&>strong': {
+              color: 'gray.12',
+              fontWeight: 'medium',
+            },
+            '&>a': {
+              color: 'gray.12',
+              fontWeight: 'medium',
+              textDecoration: 'underline',
+              textUnderlineOffset: '4px',
+            },
+          })}
+        >
+          I am a <strong>full-stack web developer</strong> from <strong
+            >🇪🇬 Alexandria, Egypt</strong
+          >, currently based in <strong>🇬🇧 London, United Kingdom</strong>.
+          Specialising in <strong>web tooling</strong>, <strong
+            >design systems</strong
+          > and <strong>Next.js</strong>. Mostly working with <strong
+            >TypeScript</strong
+          > and <strong>React</strong> based codebases. I contributed to <strong
+            >open source</strong
+          > projects such as <a
+            href="https://trpc.io"
+            target="_blank"
+            rel="noreferrer noopener">tRPC</a
+          >.
+        </p>
+        <div
+          class={css({
+            display: 'flex',
+            flexDir: {
+              base: 'column',
+              sm: 'row',
+            },
+            gap: {
+              base: 4,
+              sm: 6,
+            },
+          })}
+        >
+          <a href="/about" class={styles.button}>
+            More about me <MoveRight />
+          </a>
+          <a href="/work" class={styles.button}>
+            My work <MoveRight />
+          </a>
+          <a
+            href={siteConfig.twitter}
+            class={styles.button}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            X/Twitter <MoveRight />
+          </a>
+        </div>
+      </div>
+      <div class={css({ pt: 12 })}>
+        <h3
+          class={css({
+            color: 'gray.12',
+            fontWeight: 'semibold',
+            textStyle: 'lg',
+          })}
+        >
+          Latest blog posts
+        </h3>
+        <div>
+          {
+            posts.map((post) => (
+              <BlogItem
+                title={post.data.title}
+                description={post.data.description}
+                slug={post.slug}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </main>
+</Base>

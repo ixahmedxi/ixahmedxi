@@ -1,0 +1,31 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+
+import BaseHead from '../components/BaseHead.astro';
+import Navbar from '../components/Navbar.astro';
+import { siteConfig } from '../siteConfig';
+
+type Props = {
+  title?: string;
+  description?: string;
+  image?: string;
+};
+
+const {
+  title = siteConfig.title,
+  description = siteConfig.description,
+  image = '/og.webp',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} {image} />
+    <ViewTransitions />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+  </body>
+</html>

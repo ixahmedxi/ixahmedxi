@@ -1,50 +1,72 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 
-import BaseHead from '../components/BaseHead.astro';
+import { Move, MoveRight } from 'lucide-astro';
+
+import { css, cx } from '../../styled-system/css';
+import { prose } from '../../styled-system/recipes';
 import FormattedDate from '../components/FormattedDate.astro';
+import Base from './Base.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  heroImage = '/blog-placeholder-1.jpg',
+} = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title={`${title} - Ahmed Elsakaan Blog`}
-      description={description}
+<Base
+  title={`${title} - Ahmed Elsakaan Blog`}
+  description={description}
+  image={heroImage}
+>
+  <article class={cx(prose(), css({ py: { base: 8, lg: 16 }, mx: 'auto' }))}>
+    <img
+      src={heroImage}
+      alt={title}
+      width="100%"
+      class={css({ borderRadius: 'xl' })}
     />
-  </head>
+    <h1 class={css({ textStyle: { base: '3xl', lg: '4xl' } })}>
+      {title}
+    </h1>
+    <p>
+      Published on <FormattedDate date={pubDate} />
+      {
+        updatedDate && (
+          <span>
+            ▲ Last updated on <FormattedDate date={updatedDate} />
+          </span>
+        )
+      }
+    </p>
 
-  <body>
-    <main>
-      <article>
-        <div class="hero-image">
-          {
-            heroImage && (
-              <img width={1020} height={510} src={heroImage} alt="" />
-            )
-          }
-        </div>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
-          </div>
-          <slot />
-        </div>
-      </article>
-    </main>
-  </body>
-</html>
+    <slot />
+  </article>
+  <footer
+    class={css({
+      maxW: '65ch',
+      mx: 'auto',
+      display: 'flex',
+      justifyContent: 'flex-end',
+      pb: 16,
+    })}
+  >
+    <a
+      href="/blog"
+      class={css({
+        display: 'flex',
+        gap: 3,
+        transition: 'colors',
+        _hover: { color: 'gray.12' },
+        '&>svg': { strokeWidth: 1.5 },
+      })}
+    >
+      <MoveRight /> Read other blogs
+    </a>
+  </footer>
+</Base>

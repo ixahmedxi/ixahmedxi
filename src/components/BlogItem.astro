@@ -1,0 +1,66 @@
+---
+import { MoveRight } from 'lucide-astro';
+
+import { css } from '../../styled-system/css';
+
+type Props = {
+  title: string;
+  description: string;
+  slug: string;
+};
+
+const { title, description, slug } = Astro.props;
+
+const styles = {
+  title: css({
+    color: 'gray.12',
+    fontWeight: 'medium',
+    pb: 3,
+    display: 'inline-block',
+  }),
+  button: css({
+    display: 'flex',
+    alignItems: 'center',
+    gap: 2,
+    textStyle: 'sm',
+    color: 'gray.12',
+    fontWeight: 'medium',
+    transition: 'all',
+    position: 'relative',
+    _before: {
+      content: '""',
+      position: 'absolute',
+      bottom: '-6px',
+      left: 0,
+      w: 'full',
+      h: '1.5px',
+      bg: 'gray.12',
+      transform: 'scaleX(0)',
+      transformOrigin: 'bottom left',
+      transition: 'all',
+    },
+    _hover: {
+      _before: {
+        transform: 'scaleX(1)',
+      },
+    },
+    '&>svg': {
+      strokeWidth: 1.75,
+    },
+  }),
+};
+---
+
+<div class={css({ pt: 6 })}>
+  <h4>
+    <a href={`/blog/${slug}`} class={styles.title}>{title}</a>
+  </h4>
+  <p class={css({ textStyle: 'sm', pb: 3, maxW: '65ch' })}>
+    {description}
+  </p>
+  <div class={css({ display: 'inline-block' })}>
+    <a href={`/blog/${slug}`} class={styles.button}>
+      Read <MoveRight size={14} />
+    </a>
+  </div>
+</div>

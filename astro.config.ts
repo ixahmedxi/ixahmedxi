@@ -8,4 +8,12 @@ import { siteConfig } from './src/siteConfig';
 export default defineConfig({
   site: siteConfig.site,
   integrations: [mdx(), sitemap(), pandacss()],
+  markdown: {
+    shikiConfig: {
+      experimentalThemes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+    },
+  },
 });

@@ -24,7 +24,10 @@ const config = {
     },
   },
   rules: {
-    'import/no-unresolved': ['error', { ignore: ['^astro:content'] }],
+    'import/no-unresolved': [
+      'error',
+      { ignore: ['^astro:content', '^astro:transitions'] },
+    ],
     '@typescript-eslint/array-type': [
       'error',
       {

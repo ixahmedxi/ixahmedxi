@@ -1,0 +1,15 @@
+.dark .astro-code,
+.dark .astro-code span {
+  --shiki-dark-bg: var(--colors-gray-2) !important;
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+
+.prose--size_base code {
+  font-size: 0.9rem;
+}
+
+.prose--size_base pre {
+  border: 1px solid var(--colors-gray-4);
+  background-color: var(--colors-gray-2) !important;
+}
