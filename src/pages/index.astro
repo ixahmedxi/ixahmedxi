@@ -1,6 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
-import { MoveRight } from 'lucide-astro';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  MoveRight,
+  Twitter,
+  Youtube,
+} from 'lucide-astro';
 
 import { css } from '../../styled-system/css';
 import BlogItem from '../components/BlogItem.astro';
@@ -40,7 +47,7 @@ const styles = {
 
 const posts = (await getCollection('blog'))
   .sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf())
-  .slice(0, 3);
+  .slice(0, 2);
 ---
 
 <Base>
@@ -124,13 +131,68 @@ const posts = (await getCollection('blog'))
           <a href="/work" class={styles.button}>
             My work <MoveRight />
           </a>
+        </div>
+      </div>
+      <div class={css({ pt: 6 })}>
+        <h3
+          class={css({
+            color: 'gray.12',
+            fontWeight: 'semibold',
+            textStyle: 'lg',
+            pb: 6,
+          })}
+        >
+          Connect with me!
+        </h3>
+        <div
+          class={css({
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: {
+              base: 4,
+              sm: 6,
+            },
+          })}
+        >
           <a
             href={siteConfig.twitter}
             class={styles.button}
             target="_blank"
             rel="noreferrer noopener"
           >
-            X/Twitter <MoveRight />
+            <Twitter /> X/Twitter
+          </a>
+          <a
+            href={siteConfig.github}
+            class={styles.button}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Github /> Github
+          </a>
+          <a
+            href={siteConfig.youtube}
+            class={styles.button}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Youtube /> YouTube
+          </a>
+          <a
+            href={siteConfig.linkedin}
+            class={styles.button}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Linkedin /> LinkedIn
+          </a>
+          <a
+            href={siteConfig.email}
+            class={styles.button}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Mail /> Email
           </a>
         </div>
       </div>

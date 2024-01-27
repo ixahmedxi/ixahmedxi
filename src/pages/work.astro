@@ -1,0 +1,220 @@
+---
+import { Codepen, Github, MoveRight } from 'lucide-astro';
+
+import { css } from '../../styled-system/css';
+import Base from '../layouts/Base.astro';
+
+const styles = {
+  wrapper: css({
+    py: 24,
+    maxW: '65ch',
+    mx: 'auto',
+  }),
+  title: css({
+    textStyle: {
+      base: '2xl',
+      md: '3xl',
+      lg: '4xl',
+    },
+    fontWeight: 'semibold',
+    color: 'gray.12',
+    lineHeight: 'snug',
+  }),
+  link: css({
+    display: 'inline-flex',
+    gap: 3,
+    color: 'gray.12',
+    fontWeight: 'medium',
+    transition: 'all',
+    position: 'relative',
+    _before: {
+      content: '""',
+      position: 'absolute',
+      bottom: '-6px',
+      left: 0,
+      w: 'full',
+      h: '1.5px',
+      bg: 'gray.12',
+      transform: 'scaleX(0)',
+      transformOrigin: 'bottom left',
+      transition: 'all',
+    },
+    _hover: {
+      _before: {
+        transform: 'scaleX(1)',
+      },
+    },
+    '&>svg': {
+      strokeWidth: 1.5,
+    },
+  }),
+  headlineProjects: {
+    wrapper: css({
+      pt: 12,
+    }),
+    logo: css({
+      display: 'inline-block',
+      pb: 3,
+    }),
+    title: css({
+      textStyle: {
+        base: 'xl',
+        md: '2xl',
+        lg: '3xl',
+      },
+      pb: 3,
+      fontWeight: 'medium',
+      color: 'gray.12',
+      lineHeight: 'snug',
+    }),
+    description: css({
+      pb: 3,
+    }),
+  },
+  otherProjects: {
+    title: css({
+      pb: 2,
+      textStyle: {
+        base: 'lg',
+        md: 'xl',
+        lg: '2xl',
+      },
+      fontWeight: 'semibold',
+      color: 'gray.12',
+      lineHeight: 'snug',
+    }),
+  },
+};
+---
+
+<Base>
+  <div class={styles.wrapper}>
+    <h1 class={styles.title}>Work & Contributions</h1>
+    <p>Here are some of the projects that I have done & worked on!</p>
+    <div class={styles.headlineProjects.wrapper}>
+      <img
+        src="/trpc-logo.svg"
+        alt="tRPC logo"
+        class={styles.headlineProjects.logo}
+        width={40}
+        height={40}
+      />
+      <h1 class={styles.headlineProjects.title}>tRPC</h1>
+      <p class={styles.headlineProjects.description}>
+        tRPC is a library that creates end-to-end typesafe apis with TypeScript.
+        I have lead the efforts of designing and implementing the <a
+          href="https://trpc.io"
+          class={styles.link}>current website</a
+        > for the project as well as contributing to the library itself some times.
+      </p>
+      <a href="https://github.com/trpc/trpc" class={styles.link}>
+        Go to source <MoveRight />
+      </a>
+    </div>
+
+    <div class={styles.headlineProjects.wrapper}>
+      <img
+        src="/noodle-logo.svg"
+        alt="Noodle logo"
+        class={styles.headlineProjects.logo}
+        width={40}
+        height={40}
+      />
+      <h1 class={styles.headlineProjects.title}>Noodle</h1>
+      <p class={styles.headlineProjects.description}>
+        Noodle is an idea of mine about a product that combines everything a
+        student needs to be productive in one place such as note-taking, task
+        management, calendar, flashcards...etc
+      </p>
+      <a href="https://github.com/ixahmedxi/noodle" class={styles.link}>
+        Go to source <MoveRight />
+      </a>
+    </div>
+
+    <div
+      class={css({
+        pt: 16,
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        columnGap: 12,
+        rowGap: 12,
+      })}
+    >
+      <div>
+        <h1 class={styles.otherProjects.title}>NSP-Stack</h1>
+        <p class={styles.headlineProjects.description}>
+          NX boilerplate with next.js, trpc, next-auth, playwright, vitest...etc
+        </p>
+        <a href="https://github.com/ixahmedxi/nsp-stack" class={styles.link}>
+          Go to source <MoveRight />
+        </a>
+      </div>
+
+      <div>
+        <h1 class={styles.otherProjects.title}>Nintendo Switch in CSS</h1>
+        <p class={styles.headlineProjects.description}>
+          Nintendo switch device made purely in HTML and CSS.
+        </p>
+        <a href="https://codepen.io/ixahmedxi/pen/XWdEZNz" class={styles.link}>
+          Go to source <MoveRight />
+        </a>
+      </div>
+
+      <div>
+        <h1 class={styles.otherProjects.title}>Music Player Design in CSS</h1>
+        <p class={styles.headlineProjects.description}>
+          A music player design implemented in HTML and CSS.
+        </p>
+        <a href="https://codepen.io/ixahmedxi/pen/RKbdyJ" class={styles.link}>
+          Go to source <MoveRight />
+        </a>
+      </div>
+
+      <div>
+        <h1 class={styles.otherProjects.title}>Random Wallpaper</h1>
+        <p class={styles.headlineProjects.description}>
+          A random shapes wallpaper generator made in HTML, CSS and JS.
+        </p>
+        <a href="https://codepen.io/ixahmedxi/pen/ygbNKp" class={styles.link}>
+          Go to source <MoveRight />
+        </a>
+      </div>
+
+      <div>
+        <h1 class={styles.otherProjects.title}>MacOS Control Center</h1>
+        <p class={styles.headlineProjects.description}>
+          MacOS control center UI made with React, including the toggling of
+          buttons.
+        </p>
+        <a href="https://codepen.io/ixahmedxi/pen/zYrdBKx" class={styles.link}>
+          Go to source <MoveRight />
+        </a>
+      </div>
+
+      <div>
+        <h1 class={styles.otherProjects.title}>VSCode UI in React</h1>
+        <p class={styles.headlineProjects.description}>
+          A little challenge to re-create VSCode's UI from scratch with React.
+        </p>
+        <a href="https://codepen.io/ixahmedxi/pen/GQOWqo" class={styles.link}>
+          Go to source <MoveRight />
+        </a>
+      </div>
+    </div>
+    <div
+      class={css({
+        display: 'flex',
+        justifyContent: 'center',
+        gap: 12,
+        pt: 24,
+      })}
+    >
+      <a href="https://github.com/ixahmedxi" class={styles.link}>
+        <Github /> Github
+      </a>
+      <a href="https://codepen.io/ixahmedxi" class={styles.link}>
+        <Codepen /> Codepen
+      </a>
+    </div>
+  </div>
+</Base>

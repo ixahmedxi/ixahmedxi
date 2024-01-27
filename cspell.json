@@ -47,6 +47,10 @@
     "trpc",
     "noreferrer",
     "noopener",
-    "Specialising"
+    "Specialising",
+    "evenodd",
+    "typesafe",
+    "minmax",
+    "vitest"
   ]
 }
