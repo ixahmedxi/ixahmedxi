@@ -3,12 +3,11 @@ import { getCollection } from 'astro:content';
 import { Rss, Youtube } from 'lucide-astro';
 
 import { css } from '../../../styled-system/css';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Base from '../../layouts/Base.astro';
 import { siteConfig } from '../../siteConfig';
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
 const [latestPost, ...otherPosts] = posts;
@@ -114,6 +113,8 @@ const [latestPost, ...otherPosts] = posts;
             >
               {latestPost.data.description}
             </p>
+            {/*
+            TODO: Make this actually work
             <p
               class={css({
                 pt: 4,
@@ -123,6 +124,7 @@ const [latestPost, ...otherPosts] = posts;
             >
               <FormattedDate date={latestPost.data.pubDate} /> ▲ 10 min read
             </p>
+             */}
           </a>
         )
       }
@@ -162,9 +164,12 @@ const [latestPost, ...otherPosts] = posts;
                 <p class={css({ textStyle: 'sm', lineClamp: '2' })}>
                   {post.data.description}
                 </p>
+                {/*
+                TODO: make this actually work
                 <p class={css({ textStyle: 'xs', color: 'gray.10', pt: 4 })}>
                   <FormattedDate date={post.data.pubDate} /> ▲ 10 min read
                 </p>
+                 */}
               </a>
             </li>
           ))

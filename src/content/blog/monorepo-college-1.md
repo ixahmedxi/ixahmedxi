@@ -1,10 +1,11 @@
 ---
-title: "ESLint in Monorepos is hard, let's fix it"
-description: 'I often see many different ways people integrate ESLint into their monorepos, and often ending up with hard to maintain setups, but there is a way to overcome this pitfall.'
-pubDate: 'Jan 15 2024'
-updatedDate: 'Jan 17 2024'
-heroImage: '/blog-placeholder-1.jpg'
+title: '🎓 Monorepo college lecture 1: a beautiful morning'
+description: 'Embark on a thrilling journey to Monorepo Land, where code sharing and team collaboration are the order of the day! 🚄🌅'
+pubDate: 'Apr 07 2023'
+heroImage: '/blog/monorepo-college-1.avif'
 ---
+
+Photo by <a href="https://unsplash.com/de/@jfelise?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Josh Felise</a> on <a href="https://unsplash.com/s/photos/morning?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 Embark on a thrilling journey to Monorepo Land, where code sharing and team collaboration are the order of the day! 🚄🌅
 
@@ -78,28 +79,6 @@ Here's a potential layout for our monorepo, which may change as we progress:
     └── ui
 ```
 
-```ts
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import pandacss from '@pandacss/astro';
-import { defineConfig } from 'astro/config';
-
-import { siteConfig } from './src/siteConfig';
-
-export default defineConfig({
-  site: siteConfig.site,
-  integrations: [mdx(), sitemap(), pandacss()],
-  markdown: {
-    shikiConfig: {
-      experimentalThemes: {
-        light: 'rose-pine-dawn',
-        dark: 'rose-pine',
-      },
-    },
-  },
-});
-```
-
 ### Apps
 
 The `apps` folder will house all of Acme's applications, such as mobile and web apps, marketing sites, and product-specific applications.
@@ -165,4 +144,4 @@ Join me in the next installment, where we'll begin building Acme. Long live Acme
 
 ## One last thing
 
-Each post will feature an unrelated title inspired by a song. This episode's title comes from The Rascals' "A Beautiful Morning," released in 1968. Give it a listen!
+Each post will feature an unrelated title inspired by a song. This episode's title comes from The Rascals' "A Beautiful Morning," released in 1968. [Give it a listen!](https://www.youtube.com/watch?v=ykLVZR7RG_w)

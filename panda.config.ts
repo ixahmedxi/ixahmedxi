@@ -37,7 +37,7 @@ export default defineConfig({
               value: '{colors.gray.12}',
             },
             link: {
-              value: '{colors.crimson.10}',
+              value: '{colors.gray.12}',
             },
             bold: {
               value: '{colors.gray.12}',
@@ -68,7 +68,7 @@ export default defineConfig({
               value: '0 0 0',
             },
             code: {
-              value: '{colors.crimson.10}',
+              value: '{colors.gray.12}',
             },
             preCode: {
               value: '{colors.gray.12}',
